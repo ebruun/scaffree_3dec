@@ -1,6 +1,7 @@
 #PROJECT SPECIFIC ADDS
 # -----------
 *.3dmbak
+*.sav
 # -----------
 
 # Byte-compiled / optimized / DLL files

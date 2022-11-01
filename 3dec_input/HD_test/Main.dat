@@ -1,0 +1,111 @@
+;-----------------------------
+
+; Princeton University;
+; 191022
+;----------------------------
+
+; Test on Herringbone dome
+; Convergence Check
+
+model new
+model large-strain on
+
+;Geometry
+block generate from-vrml filename 'HD_0.wrl'
+block group 'fix'
+block fix range group 'fix'
+
+model save '00_State'
+
+block hide on
+block generate from-vrml filename 'HD_1.wrl'
+block group 'C1'
+
+block hide on
+block generate from-vrml filename 'HD_2.wrl'
+block group 'C2'
+
+block hide on
+block generate from-vrml filename 'HD_3.wrl'
+block group 'C3'
+
+block hide on
+block generate from-vrml filename 'HD_4.wrl'
+block group 'C4'
+
+block hide on
+block generate from-vrml filename 'HD_5.wrl'
+block group 'C5'
+
+block hide on
+block generate from-vrml filename 'HD_6.wrl'
+block group 'C6'
+
+
+block hide off
+
+model save '01_State'
+
+
+; Plot geometry
+plot create 'Convergence Test'
+plot item create block  
+
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 1500 
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1e9 stiffness-shear=1e9 friction=30
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e9 fric=0
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+model gravity 0 0 -9.81
+
+; Record fitness
+model history mechanical unbalanced-maximum
+history name '1' label 'Unbalanced Force'
+model history mechanical time-total
+history name '2' label 'Time'
+model his energy block-kinetic
+model his energy block-strain
+
+; Plot Unbalanced force
+plot create 'Unbalanced Force'
+plot item create chart-history history '1' vs '2'
+;plot create 'block-kinetic'
+;plot item create chart-history history '3' vs '2'
+;plot create 'block-strain'
+;plot item create chart-history history '4' vs '2'
+;plot 'Unbalanced Force' export bitmap filename 'Unbalanced Force'
+
+; Forces
+; ID  of all blocks: block list
+;fish define xC8forza_Block
+; 	bi=index(329)
+; 	xC8forza_Block = block.force.unbal.x(bi)
+;end
+
+
+; Run
+model cycle 50000
+
+model save '02_State'
+
+model solve ratio-average 1e-9
+model save '03_State'
+
+;Export fitness
+history export '1' file 'Unbalanced Force' ;You are dumb!! Do not move! The position matters, its compiled!!! 
+;---------------
+
+;model restore 'initial'
+
+
+
+
+

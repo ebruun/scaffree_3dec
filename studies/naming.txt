@@ -1,0 +1,13 @@
+The files of the models of masonry domes with hemispherical profile and a herringbone pattern are named according to the following convention:
+
+dome_herringbone_radiusout_radius_in_phideg_n_right_left_fromstep_to_step_substep
+
+radiusout : the projected radius of the dome at its outer boundary (different from sphere radius!)
+radiusin : the projected radius of the dome at its inner boundary, i.e. ocuclus
+phideg : embrace angle in degrees
+n : number of loxodromes
+right : presence of 'rightward' loxodromes as boolean (0: absent, 1: present)
+left : presence of 'leftward' loxodromes as boolean (0: absent, 1: present)
+fromstep (optional) : from which step are the blocks included (for data to import in 3DEC)
+tostep (optional) : to which step are the blocks included (for data to import in 3DEC)
+substep (optional) : which substep is considered (for data to import in 3DEC)
