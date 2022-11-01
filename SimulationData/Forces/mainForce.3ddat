@@ -1,0 +1,149 @@
+;-------------------------------------------------------------------------------------------
+; Model Test
+;-------------------------------------------------------------------------------------------
+;[Pa, N, m, s]
+model new
+;---------------------------------------------------------------
+;---------------------------------------------------------------
+call 'fix'
+block group 'Fixed'
+block fix range group 'Fixed'
+;
+;
+;
+block hide range group 'Fixed'
+;
+call 'VolLoad'
+block group 'Vol'
+;
+block hide off
+model save '00_State'
+;---------------------------------------------------------------
+;---------------------------------------------------------------
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block zone property density 1000 %% material numbers no longer supported.  Add range here %%
+block contact property stiffness-normal 1e10 stiffness-shear 1e10 friction 30 %% material numbers no longer supported.  Add range here %%
+;---------------------------------------------------------------
+;---------------------------------------------------------------
+;Plots
+;
+;
+;---------------------------------------------------------------
+;---------------------------------------------------------------
+; Damping
+block mechanical damping global
+;---------------------------------------------------------------
+;---------------------------------------------------------------
+model history mechanical unbalanced-maximum
+model history mechanical time-total
+;;---------------------------------------------------------------
+;;---------------------------------------------------------------
+;;Forces
+;;
+;fish define calc_xforza
+;	xforza=0
+;	xDforza=0
+;	bi=block.head
+;	loop while bi#0
+;		if bi=block.fix(bi)
+;			xDforza=0
+;		else
+;			xDforza=block.force.unbal.x(bi)
+;			xforza=xforza+xDforza
+;		endif
+;		bi=block.next(bi)
+;	endloop
+;end
+;;
+;fish define calc_xforza_step
+;	while_stepping
+;	calc_xforza
+;end
+;;
+;fish history @xforza
+;@calc_xforza
+;;
+;;----------------------
+;
+;;
+;;----------------------
+;fish define calc_zforza
+;	zforza=0
+;	zDforza=0
+;	bi=block.head
+;	loop while bi#0
+;		if bi=block.fix(bi)
+;			zDforza=0
+;		else
+;			zDforza=block.force.unbal.z(bi)
+;			zforza=zforza+zDforza
+;		endif
+;		bi=block.next(bi)
+;	endloop
+;end
+;;
+;fish define calc_zforza_step
+;	while_stepping
+;	calc_zforza
+;end
+;;
+;fish history @zforza
+;@calc_zforza
+;;
+;;----------------------
+;fish define z610forza_Block
+; 	bi=index(610)
+; 	z610forza_Block = block.force.unbal.z(bi)
+;end
+;;
+;fish history @z610forza_Block
+;;
+;;----------------------
+;fish define z1forza_Block
+; 	bi=index(1)
+; 	z1forza_Block = block.force.unbal.z(bi)
+;end
+;;
+;fish history @z1forza_Block
+;;--------------------------------------------------------------
+;;
+;fish define xC2forza_Block
+; 	bi=index(610)
+; 	xC2forza_Block = block.force.unbal.x(bi)
+;end
+;;
+;fish history @xC2forza_Block
+;;
+;fish define yC2forza_Block
+; 	bi=index(610)
+; 	yC2forza_Block = block.force.unbal.y(bi)
+;end
+;;
+;fish history @yC2forza_Block
+;;
+;def zC2forza_Block
+; 	bi=index(610)
+; 	zC2forza_Block = b_zforce(bi)
+;end
+;
+;hist @zC2forza_Block 								     ;10
+;------------------------------------------------------------
+;
+;
+;
+;
+;
+;
+;
+;
+;
+;---------------------------------------------------------------
+;---------------------------------------------------------------
+; Laods--Gravity [m/s^2]
+model gravity 0 0 -9.81
+;---------------------------------------------------------------
+;---------------------------------------------------------------
+model cycle 1000
+model save '01_State'
+;
+;

@@ -1,0 +1,184 @@
+;---------------------------------------------------------------
+;---------------------------------------------------------------
+; Model Test Load
+;
+;[Pa, N, m, s]
+
+;---------------------------------------------------------------
+;---------------------------------------------------------------
+
+model new
+model large-strain on
+
+;Geometry
+block generate from-vrml filename 'fix.wrl'
+block group 'fix'
+block fix range group 'fix'
+
+model save '00_State'
+
+; Plot geometry
+plot create 'Forces Test'
+plot item create block 
+
+block hide on
+block generate from-vrml filename 'free.wrl'
+block group 'Block1'
+block hide off
+
+block hide off
+
+model save '01_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2
+block property density 1000 
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1e9 stiffness-shear=1e9 friction=30
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e9 fric=0 
+
+; history
+model history mechanical unbalanced-maximum
+model history mechanical time-total
+
+; Damping
+block mechanical damping global
+
+fish define forceZ
+  blp= block.find(1)
+  forceZ=block.force.unbal.z(blp)
+end
+
+fish define forceX
+  blp= block.find(1)
+  forceX=block.force.unbal.x(blp)
+end
+
+fish define ForceY
+  blp= block.find(1)
+  forceY=block.force.unbal.y(blp)
+end
+
+fish history @forceZ
+fish history @forceX
+fish history @forceY
+
+;Plots
+plot create 'Unbalanced Force [N/s]'
+plot item create chart-history history '1' vs '2'
+plot create 'Force [N/s]'
+plot item create chart-history history '3' vs '2'
+
+; Laods--Gravity [m/s^2]
+model gravity 0 0 -9.81
+
+model cycle 1000
+model save '01_State'
+
+
+block hide on
+block generate from-vrml filename 'Force2.wrl'
+block group 'Block2'
+block hide off
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2
+block property density 1000 
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1e9 stiffness-shear=1e9 friction=30
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e9 fric=0 
+
+; Laods--Gravity [m/s^2]
+model gravity 0 0 -9.81
+
+model cycle 50000
+model save '02_State'
+
+;Export fitness
+history export '3' '4''5' file 'Unbalanced ForceX'
+history export '3' file 'Unbalanced ForceZ'
+;----------------------------------------------------
+;fish define calc_Zforza
+;    zforza=0
+;    DZforza=0
+;    loop foreach local pnt block.list
+;        Dzforza=block.force.unbal.z(pnt)
+;        zforza=zforza+Dzforza
+;    endloop
+; end
+ 
+; fish define calc_Zforza
+; 
+; end 
+ 
+; fish define calc_zforza
+;  local temp_ = 0.0
+;  loop foreach local gi block.list
+;    if block.group(gi) = 'free'
+;        temp_ = temp_ + block.force.unbal.z(gi)
+;    end_if
+;  end_loop
+;  calc_zforza = math.abs(temp_)
+;end
+
+
+;fish define calc_zforzaA
+;  local temp_ = 0.0
+;  local a= 0
+;  loop foreach local gi block.list
+;    if block.group(gi) = 'free'
+;        temp_ = a+10
+;    end_if
+;  end_loop
+;  calc_zforza = math.abs(temp_)
+;end
+
+
+
+; information on faces
+; block face list information
+; Give the position of face
+; block face list position 
+; information on blocks
+; block list
+
+
+
+;QUI CALCOLI LA FORZA CHE AGISCE SU TUTTI I BLOCCHI, CONSIDERANDO CHE NEL BLOCCO FISSO LA FORZA è 0
+;fish define calc_zforza
+;	zforza=0
+;	Dzforza=0
+;	bi=block.head
+;	loop while bi#0
+;		if bi=block.fix(bi)
+;			Dzforza=0
+;		else
+;			Dzforza=block.force.unbal.z(bi)
+;			zforza=zforza+Dzforza
+;		endif
+;		bi=block.next(bi)
+;	endloop
+;end
+;;
+;;-----------------
+;;QUI CALCOLI LA FORZA CHE AGISCE SU UN BLOCCO SOLO
+;;PER SCEGLIERE IL BLOCCO SU CUI CALCOLARLA DEVI CAMBIARE L'INDEX E METTERE QUELLO DEL BLOCCO CORRETTO. GLI INDEX LI VEDI DIGITANDO 'PRINT BLOCK'
+;fish define calc_zforza
+; 	bi=index(1)
+; 	zforza = block.force.unbal.z(bi)
+;end
+;;-----------------
+;;
+;fish define calc_zforza_step
+;	while_stepping
+;	calc_zforza
+;end
+
+
+;
+;
+;
+;
+;
