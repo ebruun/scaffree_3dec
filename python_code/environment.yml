@@ -1,0 +1,6 @@
+name: 3dec_ipython
+channels:
+  - defaults
+dependencies:
+  - python=2.7
+prefix: /Users/edvard/opt/anaconda3/envs/3dec_ipython
