@@ -4,7 +4,7 @@ import copy
 it.command("python-reset-state false")
 
 it.command("""
-model restore 'Additional_State'
+model restore '05_State'
 """)
 
 it.block.count()
@@ -28,7 +28,7 @@ b = it.block.find(1)
 #for i,b in enumerate(it.block.subcontact.list()):
 #    print("brick {}, area: {:.2f}, Norm_force: {}, position: {}".format(i,b.area(),b.force_norm(), b.pos()))
     
-with open('output.txt', 'w') as f:
+with open('../../3dec_output/output.txt', 'w') as f:
     for i,b in enumerate(it.block.subcontact.list()):
         f.write(str(i) + " ")
         f.write(str(b.area()) + " ")
@@ -39,7 +39,7 @@ with open('output.txt', 'w') as f:
 f.close()
 
 
-with open('outputContact.txt', 'w') as f:
+with open('../../3dec_output/outputContact.txt', 'w') as f:
     for i,b in enumerate(it.block.contact.list()):
         f.write(str(i) + " ")
         f.write(str(b.area()) + " ")
