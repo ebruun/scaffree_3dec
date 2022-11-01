@@ -58,15 +58,15 @@ block mechanical damping global
 
 ; Laods--Gravity [m/s^2]
 model gravity 0 0 -1.962
-model cycle 5
+model cycle 2000
 model gravity 0 0 -3.924
-model cycle 5
+model cycle 2000
 model gravity 0 0 -5.886
-model cycle 5
+model cycle 2000
 model gravity 0 0 -7.848
-model cycle 5
+model cycle 2000
 model gravity 0 0 -9.81
-model cycle 5
+model cycle 2000
 
 model save '01E_State'
 
@@ -93,15 +93,15 @@ block mechanical damping global
 
 ; Laods--Gravity [m/s^2]
 model gravity 0 0 -1.962
-model cycle 5
+model cycle 2000
 model gravity 0 0 -3.924
-model cycle 5
+model cycle 2000
 model gravity 0 0 -5.886
-model cycle 5
+model cycle 2000
 model gravity 0 0 -7.848
-model cycle 5
+model cycle 2000
 model gravity 0 0 -9.81
-model cycle 5
+model cycle 2000
 
 model save '02E_State'
 
@@ -128,15 +128,15 @@ block mechanical damping global
 
 ; Laods--Gravity [m/s^2]
 model gravity 0 0 -1.962
-model cycle 5
+model cycle 2000
 model gravity 0 0 -3.924
-model cycle 5
+model cycle 2000
 model gravity 0 0 -5.886
-model cycle 5
+model cycle 2000
 model gravity 0 0 -7.848
-model cycle 5
+model cycle 2000
 model gravity 0 0 -9.81
-model cycle 5
+model cycle 2000
 
 model save '03E_State'
 
@@ -164,15 +164,15 @@ block mechanical damping global
 
 ; Laods--Gravity [m/s^2]
 model gravity 0 0 -1.962
-model cycle 5
+model cycle 2000
 model gravity 0 0 -3.924
-model cycle 5
+model cycle 2000
 model gravity 0 0 -5.886
-model cycle 5
+model cycle 2000
 model gravity 0 0 -7.848
-model cycle 5
+model cycle 2000
 model gravity 0 0 -9.81
-model cycle 5
+model cycle 2000
 
 model save '04E_State'
 
@@ -199,15 +199,15 @@ block mechanical damping global
 
 ; Laods--Gravity [m/s^2]
 model gravity 0 0 -1.962
-model cycle 5
+model cycle 2000
 model gravity 0 0 -3.924
-model cycle 5
+model cycle 2000
 model gravity 0 0 -5.886
-model cycle 5
+model cycle 2000
 model gravity 0 0 -7.848
-model cycle 5
+model cycle 2000
 model gravity 0 0 -9.81
-model cycle 5
+model cycle 2000
 
 model save '05E_State'
 
@@ -234,15 +234,15 @@ block mechanical damping global
 
 ; Laods--Gravity [m/s^2]
 model gravity 0 0 -1.962
-model cycle 5
+model cycle 2000
 model gravity 0 0 -3.924
-model cycle 5
+model cycle 2000
 model gravity 0 0 -5.886
-model cycle 5
+model cycle 2000
 model gravity 0 0 -7.848
-model cycle 5
+model cycle 2000
 model gravity 0 0 -9.81
-model cycle 5
+model cycle 2000
 
 model save '06E_State'
 

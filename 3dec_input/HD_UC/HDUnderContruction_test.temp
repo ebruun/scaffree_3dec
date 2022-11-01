@@ -5,7 +5,7 @@
         "Version" : 7.0000000e+00 ,
         "Update" : 153 ,
         "Binary" : false ,
-        "DateTime" : "2022-11-01T12:25:52" ,
+        "DateTime" : "2022-11-01T17:49:32" ,
         "Format" : 0 ,
         "Dimension" : 3 
     },
@@ -13,7 +13,7 @@
         {
             "Name" : "Terminal" ,
             "Entry" : {
-                "SaveFile" : "05_State.sav" ,
+                "SaveFile" : "Final_State.sav" ,
                 "Kernel" : {
                     "LoadCommands" : [  ],
                     "ModuleList" : {
@@ -287,9 +287,9 @@
                         "View" : {
                             "Locked" : false ,
                             "Perspective" : false ,
-                            "EyePosition" : { "x" : 0.000000000000000e+00  , "y" : -4.390617577869658e+00  , "z" : 0.000000000000000e+00 } ,
-                            "ViewCenter" : { "x" : 0.000000000000000e+00  , "y" : 0.000000000000000e+00  , "z" : 0.000000000000000e+00 } ,
-                            "Up" : { "x" : 0.000000000000000e+00  , "y" : 0.000000000000000e+00  , "z" : 1.000000000000000e+00 } ,
+                            "EyePosition" : { "x" : 2.714992115646755e+01  , "y" : 2.703754056502913e+01  , "z" : 1.688122437497516e+01 } ,
+                            "ViewCenter" : { "x" : 3.083728819556703e+00  , "y" : 2.971348228118273e+00  , "z" : -7.184967961935713e+00 } ,
+                            "Up" : { "x" : -4.082482904638630e-01  , "y" : -4.082482904638630e-01  , "z" : 8.164965809277260e-01 } ,
                             "Magnification" : 1.000000000000000e+00 ,
                             "FirstViewAuto" : false ,
                             "MinClipPlaneDist" : -1.000000000000000e+10 ,
@@ -509,7 +509,7 @@
                                             ]
                                         }
                                     ],
-                                    "ZoneFaces" : true ,
+                                    "ZoneFaces" : false ,
                                     "Excavated" : false ,
                                     "Walls" : false ,
                                     "Map" : {
@@ -659,7 +659,7 @@
                                                 "Enabled" : true ,
                                                 "Ramp" : 0 ,
                                                 "Minimum" : 1.797693134862316e+308 ,
-                                                "Maximum" : 1.797693134862316e+308 ,
+                                                "Maximum" : -1.797693134862316e+308 ,
                                                 "Interval" : 0.000000000000000e+00 ,
                                                 "MinAuto" : true ,
                                                 "MaxAuto" : true ,
@@ -1041,7 +1041,7 @@
                                             "Enabled" : true ,
                                             "Log" : false ,
                                             "Minimum" : 1.261031150267664e-03 ,
-                                            "Maximum" : 1.121405256602317e-01 ,
+                                            "Maximum" : 7.379923807178616e+00 ,
                                             "MinAuto" : true ,
                                             "MaxAuto" : true ,
                                             "Alias" : "X-Axis" ,
@@ -1050,7 +1050,7 @@
                                                 "Active" : true ,
                                                 "Enabled" : true ,
                                                 "Show" : true ,
-                                                "Value" : -1 ,
+                                                "Value" : 0 ,
                                                 "Auto" : true 
                                             }
                                         },
@@ -1058,8 +1058,8 @@
                                             "Active" : true ,
                                             "Enabled" : true ,
                                             "Log" : false ,
-                                            "Minimum" : 1.824462655550875e+00 ,
-                                            "Maximum" : 3.814969624710420e+01 ,
+                                            "Minimum" : 3.552713678800501e-15 ,
+                                            "Maximum" : 1.026739997350210e+02 ,
                                             "MinAuto" : true ,
                                             "MaxAuto" : true ,
                                             "Alias" : "Y-Axis" ,
@@ -1068,7 +1068,7 @@
                                                 "Active" : true ,
                                                 "Enabled" : true ,
                                                 "Show" : true ,
-                                                "Value" : 1 ,
+                                                "Value" : 2 ,
                                                 "Auto" : true 
                                             }
                                         },
@@ -1270,7 +1270,7 @@
     ],
     "Terminal" : {
         "MoveLists" : true ,
-        "LineLimit" : 7 
+        "LineLimit" : 6 
     },
     "ColorMap" : {
         "EMaps" : [ 
@@ -1290,11 +1290,11 @@
     },
     "Layout" : {
         "PaneAction" : [ 
-            "Project" ,
+            "IPython Console  " ,
             "Console" ,
-            "IPython Console  " 
+            "Project" 
         ],
-        "State" : "AAAA/wAAAAD9AAAAAQAAAAAAAAYMAAADuvwCAAAAAvwAAAAdAAACywAAAPIA/////AEAAAAC+wAAAB4AUAByAG8AagBlAGMAdABfAFAAcgBvAGoAZQBjAHQBAAAAAAAAAYMAAABoAP////wAAAGHAAAEhQAAAUQA/////AIAAAAC/AAAAB0AAAIZAAAAdAEAABf6AAAAAwEAAAAG+wAAABYAUABsAG8AdABfAFAAbABvAHQAMAAxAQAAAAD/////AAAAAAAAAAD7AAAANABQAGwAbwB0AF8ASABEAF8AVQBuAGQAZQByACAAYwBvAG4AcwB0AHIAdQBjAHQAaQBvAG4BAAAAAP////8AAAD3AP////sAAAAWAEUAZABpAHQAbwByAF8ATQBhAGkAbgEAAAAA/////wAAAKMA////+wAAACYARQBkAGkAdABvAHIAXwBmAG8AcgBjAGUAXwBwAHkAdABoAG8AbgEAAAAA/////wAAAUQA////+wAAACIARQBkAGkAdABvAHIAXwBBAGQAZABpAHQAaQBvAG4AYQBsAQAAAAD/////AAAAvwD////7AAAAKgBQAGwAbwB0AF8AVQBuAGIAYQBsAGEAbgBjAGUAZAAgAEYAbwByAGMAZQEAAAAA/////wAAANoA////+wAAAB4AQwBvAG4AcwBvAGwAZQBfAEMAbwBuAHMAbwBsAGUBAAACOgAAAK4AAABvAP////sAAABGAEkAUAB5AHQAaABvAG4AIABDAG8AbgBzAG8AbABlACAAIABfAEkAUAB5AHQAaABvAG4AIABDAG8AbgBzAG8AbABlACAAIAEAAALsAAAA6wAAAFsA////AAABcAAAA7oAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAgAAACoATQBhAGkAbgBXAGkAbgBkAG8AdwBNAGUAbgB1AFQAbwBvAGwAQgBhAHIBAAAAAAAAAoMAAAAAAAAAAAAAAC4ATQBhAGkAbgBXAGkAbgBkAG8AdwBNAG8AZAB1AGwAZQBUAG8AbwBsAEIAYQByAQAAAoMAAASIAAAAAAAAAAA=" 
+        "State" : "AAAA/wAAAAD9AAAAAQAAAAAAAAYMAAADuvwCAAAAAvwAAAAdAAACywAAASQA/////AEAAAAC+wAAAB4AUAByAG8AagBlAGMAdABfAFAAcgBvAGoAZQBjAHQBAAAAAAAAAYMAAABoAP////wAAAGHAAAEhQAAAUQA/////AIAAAAC/AAAAB0AAAIZAAAAdAEAABf6AAAABQEAAAAG+wAAABYAUABsAG8AdABfAFAAbABvAHQAMAAxAQAAAAD/////AAAAAAAAAAD7AAAANABQAGwAbwB0AF8ASABEAF8AVQBuAGQAZQByACAAYwBvAG4AcwB0AHIAdQBjAHQAaQBvAG4BAAAAAP////8AAAD3AP////sAAAAWAEUAZABpAHQAbwByAF8ATQBhAGkAbgEAAAAA/////wAAAKMA////+wAAACIARQBkAGkAdABvAHIAXwBBAGQAZABpAHQAaQBvAG4AYQBsAQAAAAD/////AAAAvwD////7AAAAKgBQAGwAbwB0AF8AVQBuAGIAYQBsAGEAbgBjAGUAZAAgAEYAbwByAGMAZQEAAAAA/////wAAANoA////+wAAACYARQBkAGkAdABvAHIAXwBmAG8AcgBjAGUAXwBwAHkAdABoAG8AbgEAAAAA/////wAAAUQA/////AAAAjoAAACuAAAArAEAABf6AAAAAQIAAAAC+wAAAB4AQwBvAG4AcwBvAGwAZQBfAEMAbwBuAHMAbwBsAGUBAAAAAP////8AAAByAP////sAAAAuAEwAaQBzAHQAaQBuAGcAXwBCAGwAbwBjAGsAIABQAG8AcwBpAHQAaQBvAG4AcwEAAAAA/////wAAAJQA////+wAAAEYASQBQAHkAdABoAG8AbgAgAEMAbwBuAHMAbwBsAGUAIAAgAF8ASQBQAHkAdABoAG8AbgAgAEMAbwBuAHMAbwBsAGUAIAAgAQAAAuwAAADrAAAAWwD///8AAAFwAAADugAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAKgBNAGEAaQBuAFcAaQBuAGQAbwB3AE0AZQBuAHUAVABvAG8AbABCAGEAcgEAAAAAAAACgwAAAAAAAAAAAAAALgBNAGEAaQBuAFcAaQBuAGQAbwB3AE0AbwBkAHUAbABlAFQAbwBvAGwAQgBhAHIBAAACgwAABIgAAAAAAAAAAA==" 
     },
     "CPVisible" : true ,
     "PaneContents" : { }
