@@ -1,49 +1,39 @@
 import itasca as it
 import copy
+import json
 
 it.command("python-reset-state false")
 
 it.command("""
-model restore '05_State'
+model restore 'Final_State'
 """)
 
-it.block.count()
+Unbalanced_Force_Block_Dictonary = {}
+print (Unbalanced_Force_Block_Dictonary)
 
-b = it.block.find(1)
+# Empty dictionary
+data_dict = {}
+data_dict["model_overall"] = {}
+data_dict["model_blocks"] = {}
+volume_sum = 0.0
 
-#for i,b in enumerate(it.block.list()):
-#    print("brick {}, volume: {:.2f}, unbal: {}, centroid: {}".format(i,b.vol(),b.force_unbal(), b.pos()))
+for i,b in enumerate(it.block.list()):
+    volume_sum += b.vol()
 
+    data_dict["model_blocks"][b.index()] = {
+        "position":[b.pos()[0],b.pos()[1],b.pos()[2]],
+        "vol":b.vol(),
+        "velocity":[b.velocity()[0],b.velocity()[1],b.velocity()[2]],
+        "f_unbalance":[b.force_unbal()[0],b.force_unbal()[1],b.force_unbal()[2]]
+    }
 
-#with open('output.txt', 'w') as f:
-#    for i,b in enumerate(it.block.list()):
-#        f.write(str(i) + " ")
-#        f.write(str(b.vol()) + " ")
-#        f.write(str(b.pos())+" ")
-#        f.write(str(b.force_unbal()))
-#        f.write("\n")
-#        
-#f.close()
+data_dict["model_overall"]["total_blocks"] = it.block.count()
+data_dict["model_overall"]["total_volume"] = volume_sum
 
-#for i,b in enumerate(it.block.subcontact.list()):
-#    print("brick {}, area: {:.2f}, Norm_force: {}, position: {}".format(i,b.area(),b.force_norm(), b.pos()))
-    
-with open('../../3dec_output/output.txt', 'w') as f:
-    for i,b in enumerate(it.block.subcontact.list()):
-        f.write(str(i) + " ")
-        f.write(str(b.area()) + " ")
-        f.write(str(b.pos())+" ")
-        f.write(str(b.force_norm())+" ")
-        f.write(str(b.contact()))
-        f.write("\n")
-f.close()
+print(data_dict)
 
+f_path = '../../3dec_output/output_data.json'
 
-with open('../../3dec_output/outputContact.txt', 'w') as f:
-    for i,b in enumerate(it.block.contact.list()):
-        f.write(str(i) + " ")
-        f.write(str(b.area()) + " ")
-        f.write(str(b.pos())+" ")
-        f.write(str(b.normal()))
-        f.write("\n")
-f.close()
+with open(f_path, "w") as write_file:
+    json.dump(data_dict, write_file, indent=2)
+   
