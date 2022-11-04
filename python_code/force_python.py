@@ -1,5 +1,4 @@
 import itasca as it
-import copy
 import json
 
 it.command("python-reset-state false")
