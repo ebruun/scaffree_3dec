@@ -24,7 +24,7 @@ model save '00_State'
 ; Plot geometry
 plot create 'HD_Under construction'
 plot item create block
-plot item create structure-vector
+;plot item create structure-vector
 ; Record fitness
 model history mechanical unbalanced-maximum ;1
 ;history name '1' label 'Unbalanced Force'
@@ -60,8 +60,8 @@ block property density 2000
 ; Interfaces properties
 block contact generate-subcontacts
 block contact group 'boundary'
-block contact prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15 range group 'boundary'
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=10
+block contact prop stiffness-norm=1.5e8 stiffness-shear=1.5e9 friction=20 range group 'boundary'
+block contact material-table default prop stiffness-norm=1e8 stiffness-shear=1e9 friction=15
 
 ; Damping
 block mechanical damping global
@@ -130,8 +130,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -203,8 +203,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -252,8 +252,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -281,8 +281,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -310,8 +310,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -339,8 +339,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -368,8 +368,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -397,8 +397,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -426,8 +426,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -455,8 +455,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -484,8 +484,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -514,8 +514,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -544,8 +544,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -573,8 +573,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -602,8 +602,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -631,8 +631,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -660,8 +660,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -689,8 +689,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -718,8 +718,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -747,8 +747,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -776,8 +776,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -805,8 +805,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -834,8 +834,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -863,8 +863,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -892,8 +892,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -921,8 +921,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1003,8 +1003,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1050,8 +1050,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1079,8 +1079,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1108,8 +1108,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1137,8 +1137,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1167,8 +1167,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1196,8 +1196,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1225,8 +1225,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1254,8 +1254,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1283,8 +1283,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1312,8 +1312,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1341,8 +1341,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1370,8 +1370,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1399,8 +1399,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1428,8 +1428,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1458,8 +1458,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1487,8 +1487,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1516,8 +1516,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1545,8 +1545,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1574,8 +1574,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1603,8 +1603,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1632,8 +1632,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1662,8 +1662,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1691,8 +1691,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1720,8 +1720,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1779,8 +1779,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
@@ -1825,8 +1825,8 @@ block property density 2000
 
 ; Interfaces properties
 block contact generate-subcontacts
-block contact prop stiffness-norm=2.84e10 stiffness-shear=2.84e9 friction=25
-block contact material-table default prop stiffness-norm=2.84e9 stiffness-shear=2.84e8 friction=15
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
 
 ; Damping
 block mechanical damping global
