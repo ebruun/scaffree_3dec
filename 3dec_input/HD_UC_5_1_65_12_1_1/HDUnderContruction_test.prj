@@ -5,7 +5,7 @@
         "Version" : 7.0000000e+00 ,
         "Update" : 153 ,
         "Binary" : false ,
-        "DateTime" : "2022-11-08T12:07:59" ,
+        "DateTime" : "2022-11-10T09:50:46" ,
         "Format" : 0 ,
         "Dimension" : 3 
     },
@@ -13,7 +13,7 @@
         {
             "Name" : "Terminal" ,
             "Entry" : {
-                "SaveFile" : "78_Final_State.sav" ,
+                "SaveFile" : "18_35E_State.sav" ,
                 "Kernel" : {
                     "LoadCommands" : [  ],
                     "ModuleList" : {
@@ -172,7 +172,7 @@
                         "../../python_code/analysis_function.py" 
                     ]
                 },
-                "LastActive" : "C:/Users/3DEC/Documents/GitHub/scaffree_3dec/python_code/OutputUnbalancedHis.py" ,
+                "LastActive" : "C:/Users/3DEC/Documents/GitHub/scaffree_3dec/3dec_input/HD_UC_5_1_65_12_1_1/Main.dat" ,
                 "OpenFiles" : [ 
                     "Main.dat" ,
                     "../../python_code/force_python.py" ,
@@ -385,9 +385,834 @@
                     {
                         "View" : {
                             "Locked" : false ,
+                            "Perspective" : true ,
+                            "EyePosition" : { "x" : 0.000000000000000e+00  , "y" : -4.989988731790440e+00  , "z" : 0.000000000000000e+00 } ,
+                            "ViewCenter" : { "x" : 0.000000000000000e+00  , "y" : 0.000000000000000e+00  , "z" : 0.000000000000000e+00 } ,
+                            "Up" : { "x" : 0.000000000000000e+00  , "y" : 0.000000000000000e+00  , "z" : 1.000000000000000e+00 } ,
+                            "Magnification" : 1.000000000000000e+00 ,
+                            "FirstViewAuto" : false ,
+                            "MinClipPlaneDist" : -1.000000000000000e+10 ,
+                            "MaxClipPlaneDist" : 1.000000000000000e+10 ,
+                            "SpecAsOrientation" : false ,
+                            "OrientationIn" : { "x" : 0.000000000000000e+00  , "y" : 0.000000000000000e+00  , "z" : 0.000000000000000e+00 } ,
+                            "SyncToName" : "Unsynced" 
+                        },
+                        "Properties" : {
+                            "AutoUpdate" : true ,
+                            "Outline" : {
+                                "Active" : true ,
+                                "Enabled" : true ,
+                                "Width" : 2 ,
+                                "Style" : 1 ,
+                                "Color" : "#000000FF" ,
+                                "Bool" : true 
+                            },
+                            "Background" : "#ffffffFF" ,
+                            "Active" : true ,
+                            "Legend" : {
+                                "Active" : true ,
+                                "Placement" : 0 ,
+                                "TargetSize" : {
+                                    "Width" : 25 ,
+                                    "Height" : 50 
+                                },
+                                "Position" : {
+                                    "X" : 66 ,
+                                    "Y" : 40 
+                                },
+                                "Title" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "Size" : 55 ,
+                                    "Family" : "Times New Roman" ,
+                                    "Style" : 1 ,
+                                    "Color" : "#000000FF" ,
+                                    "Bool" : true ,
+                                    "Text" : "" 
+                                },
+                                "Caption" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "Size" : 44 ,
+                                    "Family" : "Arial" ,
+                                    "Style" : 0 ,
+                                    "Color" : "#000000FF" ,
+                                    "Bool" : true ,
+                                    "Text" : "" 
+                                },
+                                "Heading" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "Size" : 94 ,
+                                    "Family" : "Times New Roman" ,
+                                    "Style" : 3 ,
+                                    "Color" : "#000000FF" ,
+                                    "Bool" : true ,
+                                    "Text" : "" 
+                                },
+                                "Copyright" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "Size" : 40 ,
+                                    "Family" : "Arial" ,
+                                    "Style" : 0 ,
+                                    "Color" : "#000000FF" ,
+                                    "Bool" : true ,
+                                    "Text" : "" 
+                                },
+                                "Step" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "Size" : 44 ,
+                                    "Family" : "Arial" ,
+                                    "Style" : 0 ,
+                                    "Color" : "#000000FF" ,
+                                    "Bool" : false ,
+                                    "Text" : "" 
+                                },
+                                "Time" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "Size" : 44 ,
+                                    "Family" : "Arial" ,
+                                    "Style" : 0 ,
+                                    "Color" : "#000000FF" ,
+                                    "Bool" : false ,
+                                    "Text" : "" 
+                                },
+                                "Customer" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "Size" : 44 ,
+                                    "Family" : "Arial" ,
+                                    "Style" : 0 ,
+                                    "Color" : "#000000FF" ,
+                                    "Bool" : false ,
+                                    "Text" : "" 
+                                },
+                                "View" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "Size" : 44 ,
+                                    "Family" : "Arial" ,
+                                    "Style" : 0 ,
+                                    "Color" : "#000000FF" ,
+                                    "Bool" : false ,
+                                    "Text" : "" 
+                                },
+                                "ModelTime" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "Size" : 44 ,
+                                    "Family" : "Arial" ,
+                                    "Style" : 0 ,
+                                    "Color" : "#000000FF" ,
+                                    "Bool" : false ,
+                                    "Text" : "" 
+                                },
+                                "ViewDip" : false 
+                            },
+                            "Movie" : false ,
+                            "NextMovieIndex" : 1 ,
+                            "JobTitle" : {
+                                "Active" : true ,
+                                "Enabled" : true ,
+                                "Size" : 12 ,
+                                "Family" : "Arial" ,
+                                "Style" : 0 ,
+                                "Color" : "#000000FF" ,
+                                "Bool" : false ,
+                                "Text" : "" 
+                            },
+                            "ViewTitle" : {
+                                "Active" : true ,
+                                "Enabled" : true ,
+                                "Size" : 12 ,
+                                "Family" : "Arial" ,
+                                "Style" : 0 ,
+                                "Color" : "#000000FF" ,
+                                "Bool" : false ,
+                                "Text" : "Plot Title" 
+                            },
+                            "Target" : true 
+                        },
+                        "PlotItems" : [ 
+                            {
+                                "Name" : "history" ,
+                                "Item" : {
+                                    "Active" : false ,
+                                    "Type" : 0 ,
+                                    "PIActive" : false ,
+                                    "ShowCaption" : true ,
+                                    "Title" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Size" : 55 ,
+                                        "Family" : "Times New Roman" ,
+                                        "Style" : 1 ,
+                                        "Color" : "#000000FF" ,
+                                        "Bool" : true ,
+                                        "Text" : "" 
+                                    },
+                                    "Transparency" : 70 ,
+                                    "TransActive" : false ,
+                                    "TransLocked" : true ,
+                                    "Range" : [  ],
+                                    "Chart" : {
+                                        "Active" : true ,
+                                        "Chart" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Grid" : {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "Width" : 1 ,
+                                                "Style" : 1 ,
+                                                "Color" : "#000000FF" ,
+                                                "Bool" : false 
+                                            },
+                                            "Width" : 2 ,
+                                            "Box" : false ,
+                                            "Color" : "#000000FF" ,
+                                            "Position" : {
+                                                "X" : 1 ,
+                                                "Y" : 1 
+                                            },
+                                            "Size" : {
+                                                "Width" : 98 ,
+                                                "Height" : 98 
+                                            }
+                                        },
+                                        "XAxis" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Log" : false ,
+                                            "Minimum" : 1.723671100636033e+00 ,
+                                            "Maximum" : 1.761322353694829e+00 ,
+                                            "MinAuto" : true ,
+                                            "MaxAuto" : true ,
+                                            "Alias" : "X-Axis" ,
+                                            "Inside" : true ,
+                                            "Exponent" : {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "Show" : true ,
+                                                "Value" : 0 ,
+                                                "Auto" : true 
+                                            }
+                                        },
+                                        "YAxis" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Log" : false ,
+                                            "Minimum" : -5.991162867240713e-04 ,
+                                            "Maximum" : 1.441984963503776e-05 ,
+                                            "MinAuto" : true ,
+                                            "MaxAuto" : true ,
+                                            "Alias" : "Y-Axis" ,
+                                            "Inside" : true ,
+                                            "Exponent" : {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "Show" : true ,
+                                                "Value" : -4 ,
+                                                "Auto" : true 
+                                            }
+                                        },
+                                        "Title" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Size" : 25 ,
+                                            "Family" : "Arial" ,
+                                            "Style" : 1 ,
+                                            "Color" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "Labels" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Size" : 20 ,
+                                            "Family" : "Times New Roman" ,
+                                            "Style" : 1 ,
+                                            "Color" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "Marks" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Size" : 18 ,
+                                            "Family" : "Times New Roman" ,
+                                            "Style" : 0 ,
+                                            "Color" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "SeriesCaption" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Size" : 44 ,
+                                            "Family" : "Arial" ,
+                                            "Style" : 0 ,
+                                            "Color" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "RangeCaption" : false ,
+                                        "Series" : [ 
+                                            {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "Style" : 0 ,
+                                                "Name" : "15 C10_Corner" ,
+                                                "Alias" : "" ,
+                                                "XReversed" : false ,
+                                                "YReversed" : false ,
+                                                "Line" : {
+                                                    "Active" : true ,
+                                                    "Enabled" : true ,
+                                                    "Width" : 2 ,
+                                                    "Style" : 1 ,
+                                                    "Color" : "#00ffffFF" ,
+                                                    "Bool" : true 
+                                                },
+                                                "Mark" : {
+                                                    "Active" : true ,
+                                                    "Enabled" : true ,
+                                                    "Color" : "#00ffffFF" ,
+                                                    "Size" : 2 ,
+                                                    "Type" : 0 
+                                                },
+                                                "ID" : "15" 
+                                            }
+                                        ]
+                                    },
+                                    "Begin" : 0 ,
+                                    "End" : 0 ,
+                                    "Skip" : 0 ,
+                                    "Vs" : "2" ,
+                                    "VsReversed" : false ,
+                                    "VsCaption" : false ,
+                                    "VsText" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Size" : 44 ,
+                                        "Family" : "Arial" ,
+                                        "Style" : 0 ,
+                                        "Color" : "#000000FF" ,
+                                        "Bool" : true ,
+                                        "Text" : "" 
+                                    }
+                                }
+                            }, 
+                            {
+                                "Name" : "history" ,
+                                "Item" : {
+                                    "Active" : true ,
+                                    "Type" : 0 ,
+                                    "PIActive" : true ,
+                                    "ShowCaption" : true ,
+                                    "Title" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Size" : 55 ,
+                                        "Family" : "Times New Roman" ,
+                                        "Style" : 1 ,
+                                        "Color" : "#000000FF" ,
+                                        "Bool" : true ,
+                                        "Text" : "" 
+                                    },
+                                    "Transparency" : 70 ,
+                                    "TransActive" : false ,
+                                    "TransLocked" : true ,
+                                    "Range" : [  ],
+                                    "Chart" : {
+                                        "Active" : true ,
+                                        "Chart" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Grid" : {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "Width" : 1 ,
+                                                "Style" : 1 ,
+                                                "Color" : "#000000FF" ,
+                                                "Bool" : false 
+                                            },
+                                            "Width" : 2 ,
+                                            "Box" : false ,
+                                            "Color" : "#000000FF" ,
+                                            "Position" : {
+                                                "X" : 1 ,
+                                                "Y" : 1 
+                                            },
+                                            "Size" : {
+                                                "Width" : 98 ,
+                                                "Height" : 98 
+                                            }
+                                        },
+                                        "XAxis" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Log" : false ,
+                                            "Minimum" : 7.087066469986634e+00 ,
+                                            "Maximum" : 1.175412127031048e+01 ,
+                                            "MinAuto" : true ,
+                                            "MaxAuto" : true ,
+                                            "Alias" : "X-Axis" ,
+                                            "Inside" : true ,
+                                            "Exponent" : {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "Show" : true ,
+                                                "Value" : 1 ,
+                                                "Auto" : true 
+                                            }
+                                        },
+                                        "YAxis" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Log" : false ,
+                                            "Minimum" : -1.285426813376370e-03 ,
+                                            "Maximum" : -6.992441452969542e-06 ,
+                                            "MinAuto" : true ,
+                                            "MaxAuto" : true ,
+                                            "Alias" : "Y-Axis" ,
+                                            "Inside" : true ,
+                                            "Exponent" : {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "Show" : true ,
+                                                "Value" : -3 ,
+                                                "Auto" : true 
+                                            }
+                                        },
+                                        "Title" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Size" : 25 ,
+                                            "Family" : "Arial" ,
+                                            "Style" : 1 ,
+                                            "Color" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "Labels" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Size" : 20 ,
+                                            "Family" : "Times New Roman" ,
+                                            "Style" : 1 ,
+                                            "Color" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "Marks" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Size" : 18 ,
+                                            "Family" : "Times New Roman" ,
+                                            "Style" : 0 ,
+                                            "Color" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "SeriesCaption" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Size" : 44 ,
+                                            "Family" : "Arial" ,
+                                            "Style" : 0 ,
+                                            "Color" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "RangeCaption" : false ,
+                                        "Series" : [ 
+                                            {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "Style" : 0 ,
+                                                "Name" : "44 Z Displacement at g-p 34684" ,
+                                                "Alias" : "" ,
+                                                "XReversed" : false ,
+                                                "YReversed" : false ,
+                                                "Line" : {
+                                                    "Active" : true ,
+                                                    "Enabled" : true ,
+                                                    "Width" : 2 ,
+                                                    "Style" : 1 ,
+                                                    "Color" : "#ff00d5FF" ,
+                                                    "Bool" : true 
+                                                },
+                                                "Mark" : {
+                                                    "Active" : true ,
+                                                    "Enabled" : true ,
+                                                    "Color" : "#ff00d5FF" ,
+                                                    "Size" : 2 ,
+                                                    "Type" : 0 
+                                                },
+                                                "ID" : "44" 
+                                            }
+                                        ]
+                                    },
+                                    "Begin" : 0 ,
+                                    "End" : 0 ,
+                                    "Skip" : 0 ,
+                                    "Vs" : "2" ,
+                                    "VsReversed" : false ,
+                                    "VsCaption" : false ,
+                                    "VsText" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Size" : 44 ,
+                                        "Family" : "Arial" ,
+                                        "Style" : 0 ,
+                                        "Color" : "#000000FF" ,
+                                        "Bool" : true ,
+                                        "Text" : "" 
+                                    }
+                                }
+                            }
+                        ],
+                        "ID" : 4 ,
+                        "Name" : "C12_17_Velocity" 
+                    }, 
+                    {
+                        "View" : {
+                            "Locked" : false ,
+                            "Perspective" : true ,
+                            "EyePosition" : { "x" : 0.000000000000000e+00  , "y" : -4.752370220752800e+00  , "z" : 0.000000000000000e+00 } ,
+                            "ViewCenter" : { "x" : 0.000000000000000e+00  , "y" : 0.000000000000000e+00  , "z" : 0.000000000000000e+00 } ,
+                            "Up" : { "x" : 0.000000000000000e+00  , "y" : 0.000000000000000e+00  , "z" : 1.000000000000000e+00 } ,
+                            "Magnification" : 1.000000000000000e+00 ,
+                            "FirstViewAuto" : false ,
+                            "MinClipPlaneDist" : -1.000000000000000e+10 ,
+                            "MaxClipPlaneDist" : 1.000000000000000e+10 ,
+                            "SpecAsOrientation" : false ,
+                            "OrientationIn" : { "x" : 0.000000000000000e+00  , "y" : 0.000000000000000e+00  , "z" : 0.000000000000000e+00 } ,
+                            "SyncToName" : "Unsynced" 
+                        },
+                        "Properties" : {
+                            "AutoUpdate" : true ,
+                            "Outline" : {
+                                "Active" : true ,
+                                "Enabled" : true ,
+                                "Width" : 2 ,
+                                "Style" : 1 ,
+                                "Color" : "#000000FF" ,
+                                "Bool" : true 
+                            },
+                            "Background" : "#ffffffFF" ,
+                            "Active" : true ,
+                            "Legend" : {
+                                "Active" : true ,
+                                "Placement" : 0 ,
+                                "TargetSize" : {
+                                    "Width" : 25 ,
+                                    "Height" : 50 
+                                },
+                                "Position" : {
+                                    "X" : 66 ,
+                                    "Y" : 40 
+                                },
+                                "Title" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "Size" : 55 ,
+                                    "Family" : "Times New Roman" ,
+                                    "Style" : 1 ,
+                                    "Color" : "#000000FF" ,
+                                    "Bool" : true ,
+                                    "Text" : "" 
+                                },
+                                "Caption" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "Size" : 44 ,
+                                    "Family" : "Arial" ,
+                                    "Style" : 0 ,
+                                    "Color" : "#000000FF" ,
+                                    "Bool" : true ,
+                                    "Text" : "" 
+                                },
+                                "Heading" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "Size" : 94 ,
+                                    "Family" : "Times New Roman" ,
+                                    "Style" : 3 ,
+                                    "Color" : "#000000FF" ,
+                                    "Bool" : true ,
+                                    "Text" : "" 
+                                },
+                                "Copyright" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "Size" : 40 ,
+                                    "Family" : "Arial" ,
+                                    "Style" : 0 ,
+                                    "Color" : "#000000FF" ,
+                                    "Bool" : true ,
+                                    "Text" : "" 
+                                },
+                                "Step" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "Size" : 44 ,
+                                    "Family" : "Arial" ,
+                                    "Style" : 0 ,
+                                    "Color" : "#000000FF" ,
+                                    "Bool" : false ,
+                                    "Text" : "" 
+                                },
+                                "Time" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "Size" : 44 ,
+                                    "Family" : "Arial" ,
+                                    "Style" : 0 ,
+                                    "Color" : "#000000FF" ,
+                                    "Bool" : false ,
+                                    "Text" : "" 
+                                },
+                                "Customer" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "Size" : 44 ,
+                                    "Family" : "Arial" ,
+                                    "Style" : 0 ,
+                                    "Color" : "#000000FF" ,
+                                    "Bool" : false ,
+                                    "Text" : "" 
+                                },
+                                "View" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "Size" : 44 ,
+                                    "Family" : "Arial" ,
+                                    "Style" : 0 ,
+                                    "Color" : "#000000FF" ,
+                                    "Bool" : false ,
+                                    "Text" : "" 
+                                },
+                                "ModelTime" : {
+                                    "Active" : true ,
+                                    "Enabled" : true ,
+                                    "Size" : 44 ,
+                                    "Family" : "Arial" ,
+                                    "Style" : 0 ,
+                                    "Color" : "#000000FF" ,
+                                    "Bool" : false ,
+                                    "Text" : "" 
+                                },
+                                "ViewDip" : false 
+                            },
+                            "Movie" : false ,
+                            "NextMovieIndex" : 1 ,
+                            "JobTitle" : {
+                                "Active" : true ,
+                                "Enabled" : true ,
+                                "Size" : 12 ,
+                                "Family" : "Arial" ,
+                                "Style" : 0 ,
+                                "Color" : "#000000FF" ,
+                                "Bool" : false ,
+                                "Text" : "" 
+                            },
+                            "ViewTitle" : {
+                                "Active" : true ,
+                                "Enabled" : true ,
+                                "Size" : 12 ,
+                                "Family" : "Arial" ,
+                                "Style" : 0 ,
+                                "Color" : "#000000FF" ,
+                                "Bool" : false ,
+                                "Text" : "Plot Title" 
+                            },
+                            "Target" : true 
+                        },
+                        "PlotItems" : [ 
+                            {
+                                "Name" : "history" ,
+                                "Item" : {
+                                    "Active" : true ,
+                                    "Type" : 0 ,
+                                    "PIActive" : true ,
+                                    "ShowCaption" : true ,
+                                    "Title" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Size" : 55 ,
+                                        "Family" : "Times New Roman" ,
+                                        "Style" : 1 ,
+                                        "Color" : "#000000FF" ,
+                                        "Bool" : true ,
+                                        "Text" : "" 
+                                    },
+                                    "Transparency" : 70 ,
+                                    "TransActive" : false ,
+                                    "TransLocked" : true ,
+                                    "Range" : [  ],
+                                    "Chart" : {
+                                        "Active" : true ,
+                                        "Chart" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Grid" : {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "Width" : 1 ,
+                                                "Style" : 1 ,
+                                                "Color" : "#000000FF" ,
+                                                "Bool" : false 
+                                            },
+                                            "Width" : 2 ,
+                                            "Box" : false ,
+                                            "Color" : "#000000FF" ,
+                                            "Position" : {
+                                                "X" : 1 ,
+                                                "Y" : 1 
+                                            },
+                                            "Size" : {
+                                                "Width" : 98 ,
+                                                "Height" : 98 
+                                            }
+                                        },
+                                        "XAxis" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Log" : false ,
+                                            "Minimum" : -8.560443499344359e+301 ,
+                                            "Maximum" : 8.560443499344359e+301 ,
+                                            "MinAuto" : true ,
+                                            "MaxAuto" : true ,
+                                            "Alias" : "X-Axis" ,
+                                            "Inside" : true ,
+                                            "Exponent" : {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "Show" : true ,
+                                                "Value" : 301 ,
+                                                "Auto" : true 
+                                            }
+                                        },
+                                        "YAxis" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Log" : false ,
+                                            "Minimum" : -8.560443499344359e+301 ,
+                                            "Maximum" : 8.560443499344359e+301 ,
+                                            "MinAuto" : true ,
+                                            "MaxAuto" : true ,
+                                            "Alias" : "Y-Axis" ,
+                                            "Inside" : true ,
+                                            "Exponent" : {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "Show" : true ,
+                                                "Value" : 301 ,
+                                                "Auto" : true 
+                                            }
+                                        },
+                                        "Title" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Size" : 25 ,
+                                            "Family" : "Arial" ,
+                                            "Style" : 1 ,
+                                            "Color" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "Labels" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Size" : 20 ,
+                                            "Family" : "Times New Roman" ,
+                                            "Style" : 1 ,
+                                            "Color" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "Marks" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Size" : 18 ,
+                                            "Family" : "Times New Roman" ,
+                                            "Style" : 0 ,
+                                            "Color" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "SeriesCaption" : {
+                                            "Active" : true ,
+                                            "Enabled" : true ,
+                                            "Size" : 44 ,
+                                            "Family" : "Arial" ,
+                                            "Style" : 0 ,
+                                            "Color" : "#000000FF" ,
+                                            "Bool" : true ,
+                                            "Text" : "" 
+                                        },
+                                        "RangeCaption" : false ,
+                                        "Series" : [ 
+                                            {
+                                                "Active" : true ,
+                                                "Enabled" : true ,
+                                                "Style" : 0 ,
+                                                "Name" : "1" ,
+                                                "Alias" : "" ,
+                                                "XReversed" : false ,
+                                                "YReversed" : false ,
+                                                "Line" : {
+                                                    "Active" : true ,
+                                                    "Enabled" : true ,
+                                                    "Width" : 2 ,
+                                                    "Style" : 1 ,
+                                                    "Color" : "#00ffffFF" ,
+                                                    "Bool" : true 
+                                                },
+                                                "Mark" : {
+                                                    "Active" : true ,
+                                                    "Enabled" : true ,
+                                                    "Color" : "#00ffffFF" ,
+                                                    "Size" : 2 ,
+                                                    "Type" : 0 
+                                                },
+                                                "ID" : "1" 
+                                            }
+                                        ]
+                                    },
+                                    "Begin" : 0 ,
+                                    "End" : 0 ,
+                                    "Skip" : 0 ,
+                                    "Vs" : "2" ,
+                                    "VsReversed" : false ,
+                                    "VsCaption" : false ,
+                                    "VsText" : {
+                                        "Active" : true ,
+                                        "Enabled" : true ,
+                                        "Size" : 44 ,
+                                        "Family" : "Arial" ,
+                                        "Style" : 0 ,
+                                        "Color" : "#000000FF" ,
+                                        "Bool" : true ,
+                                        "Text" : "" 
+                                    }
+                                }
+                            }
+                        ],
+                        "ID" : 3 ,
+                        "Name" : "Unbalanced Force" 
+                    }, 
+                    {
+                        "View" : {
+                            "Locked" : false ,
                             "Perspective" : false ,
-                            "EyePosition" : { "x" : -5.121034310134906e+00  , "y" : -7.503448971094683e+00  , "z" : 4.169192130301217e+00 } ,
-                            "ViewCenter" : { "x" : 2.878014669097438e+00  , "y" : 3.215538400114914e+00  , "z" : 1.186944336174349e+00 } ,
+                            "EyePosition" : { "x" : -1.940703654583433e+01  , "y" : -2.664715942306268e+01  , "z" : 9.495375125919622e+00 } ,
+                            "ViewCenter" : { "x" : 2.878014669097436e+00  , "y" : 3.215538400114909e+00  , "z" : 1.186944336174345e+00 } ,
                             "Up" : { "x" : 3.019704767350346e-01  , "y" : 3.965772623291694e-02  , "z" : 9.524920450746301e-01 } ,
                             "Magnification" : 1.000000000000000e+00 ,
                             "FirstViewAuto" : false ,
@@ -796,8 +1621,8 @@
                                                 "Active" : true ,
                                                 "Enabled" : true ,
                                                 "Ramp" : 0 ,
-                                                "Minimum" : 0.000000000000000e+00 ,
-                                                "Maximum" : 1.212650022576004e-08 ,
+                                                "Minimum" : 1.797693134862316e+308 ,
+                                                "Maximum" : 1.797693134862316e+308 ,
                                                 "Interval" : 0.000000000000000e+00 ,
                                                 "MinAuto" : true ,
                                                 "MaxAuto" : true ,
@@ -1189,8 +2014,8 @@
                                                 "Active" : true ,
                                                 "Enabled" : true ,
                                                 "Ramp" : 0 ,
-                                                "Minimum" : 0.000000000000000e+00 ,
-                                                "Maximum" : 7.357609728406089e-03 ,
+                                                "Minimum" : 1.797693134862316e+308 ,
+                                                "Maximum" : 1.797693134862316e+308 ,
                                                 "Interval" : 0.000000000000000e+00 ,
                                                 "MinAuto" : true ,
                                                 "MaxAuto" : true ,
@@ -1552,7 +2377,7 @@
                                                                     "Alias" : "" ,
                                                                     "Label" : "Default=C36_53" ,
                                                                     "Bool" : true ,
-                                                                    "Used2" : true ,
+                                                                    "Used2" : false ,
                                                                     "Default" : false 
                                                                 }
                                                                 , 
@@ -1561,7 +2386,7 @@
                                                                     "Alias" : "" ,
                                                                     "Label" : "Default=C54_71" ,
                                                                     "Bool" : true ,
-                                                                    "Used2" : true ,
+                                                                    "Used2" : false ,
                                                                     "Default" : false 
                                                                 }
                                                                 , 
@@ -1570,7 +2395,7 @@
                                                                     "Alias" : "" ,
                                                                     "Label" : "Default=C72_78" ,
                                                                     "Bool" : true ,
-                                                                    "Used2" : true ,
+                                                                    "Used2" : false ,
                                                                     "Default" : false 
                                                                 }
                                                                 , 
@@ -1683,7 +2508,7 @@
                                                 "Enabled" : true ,
                                                 "Ramp" : 0 ,
                                                 "Minimum" : 1.797693134862316e+308 ,
-                                                "Maximum" : 1.797693134862316e+308 ,
+                                                "Maximum" : -1.797693134862316e+308 ,
                                                 "Interval" : 0.000000000000000e+00 ,
                                                 "MinAuto" : true ,
                                                 "MaxAuto" : true ,
@@ -2127,7 +2952,7 @@
                                                 "Enabled" : true ,
                                                 "Ramp" : 0 ,
                                                 "Minimum" : 1.797693134862316e+308 ,
-                                                "Maximum" : -1.797693134862316e+308 ,
+                                                "Maximum" : 1.797693134862316e+308 ,
                                                 "Interval" : 0.000000000000000e+00 ,
                                                 "MinAuto" : true ,
                                                 "MaxAuto" : true ,
@@ -2249,831 +3074,6 @@
                         ],
                         "ID" : 2 ,
                         "Name" : "HD_Under construction" 
-                    }, 
-                    {
-                        "View" : {
-                            "Locked" : false ,
-                            "Perspective" : true ,
-                            "EyePosition" : { "x" : 0.000000000000000e+00  , "y" : -4.752370220752800e+00  , "z" : 0.000000000000000e+00 } ,
-                            "ViewCenter" : { "x" : 0.000000000000000e+00  , "y" : 0.000000000000000e+00  , "z" : 0.000000000000000e+00 } ,
-                            "Up" : { "x" : 0.000000000000000e+00  , "y" : 0.000000000000000e+00  , "z" : 1.000000000000000e+00 } ,
-                            "Magnification" : 1.000000000000000e+00 ,
-                            "FirstViewAuto" : false ,
-                            "MinClipPlaneDist" : -1.000000000000000e+10 ,
-                            "MaxClipPlaneDist" : 1.000000000000000e+10 ,
-                            "SpecAsOrientation" : false ,
-                            "OrientationIn" : { "x" : 0.000000000000000e+00  , "y" : 0.000000000000000e+00  , "z" : 0.000000000000000e+00 } ,
-                            "SyncToName" : "Unsynced" 
-                        },
-                        "Properties" : {
-                            "AutoUpdate" : true ,
-                            "Outline" : {
-                                "Active" : true ,
-                                "Enabled" : true ,
-                                "Width" : 2 ,
-                                "Style" : 1 ,
-                                "Color" : "#000000FF" ,
-                                "Bool" : true 
-                            },
-                            "Background" : "#ffffffFF" ,
-                            "Active" : true ,
-                            "Legend" : {
-                                "Active" : true ,
-                                "Placement" : 0 ,
-                                "TargetSize" : {
-                                    "Width" : 25 ,
-                                    "Height" : 50 
-                                },
-                                "Position" : {
-                                    "X" : 66 ,
-                                    "Y" : 40 
-                                },
-                                "Title" : {
-                                    "Active" : true ,
-                                    "Enabled" : true ,
-                                    "Size" : 55 ,
-                                    "Family" : "Times New Roman" ,
-                                    "Style" : 1 ,
-                                    "Color" : "#000000FF" ,
-                                    "Bool" : true ,
-                                    "Text" : "" 
-                                },
-                                "Caption" : {
-                                    "Active" : true ,
-                                    "Enabled" : true ,
-                                    "Size" : 44 ,
-                                    "Family" : "Arial" ,
-                                    "Style" : 0 ,
-                                    "Color" : "#000000FF" ,
-                                    "Bool" : true ,
-                                    "Text" : "" 
-                                },
-                                "Heading" : {
-                                    "Active" : true ,
-                                    "Enabled" : true ,
-                                    "Size" : 94 ,
-                                    "Family" : "Times New Roman" ,
-                                    "Style" : 3 ,
-                                    "Color" : "#000000FF" ,
-                                    "Bool" : true ,
-                                    "Text" : "" 
-                                },
-                                "Copyright" : {
-                                    "Active" : true ,
-                                    "Enabled" : true ,
-                                    "Size" : 40 ,
-                                    "Family" : "Arial" ,
-                                    "Style" : 0 ,
-                                    "Color" : "#000000FF" ,
-                                    "Bool" : true ,
-                                    "Text" : "" 
-                                },
-                                "Step" : {
-                                    "Active" : true ,
-                                    "Enabled" : true ,
-                                    "Size" : 44 ,
-                                    "Family" : "Arial" ,
-                                    "Style" : 0 ,
-                                    "Color" : "#000000FF" ,
-                                    "Bool" : false ,
-                                    "Text" : "" 
-                                },
-                                "Time" : {
-                                    "Active" : true ,
-                                    "Enabled" : true ,
-                                    "Size" : 44 ,
-                                    "Family" : "Arial" ,
-                                    "Style" : 0 ,
-                                    "Color" : "#000000FF" ,
-                                    "Bool" : false ,
-                                    "Text" : "" 
-                                },
-                                "Customer" : {
-                                    "Active" : true ,
-                                    "Enabled" : true ,
-                                    "Size" : 44 ,
-                                    "Family" : "Arial" ,
-                                    "Style" : 0 ,
-                                    "Color" : "#000000FF" ,
-                                    "Bool" : false ,
-                                    "Text" : "" 
-                                },
-                                "View" : {
-                                    "Active" : true ,
-                                    "Enabled" : true ,
-                                    "Size" : 44 ,
-                                    "Family" : "Arial" ,
-                                    "Style" : 0 ,
-                                    "Color" : "#000000FF" ,
-                                    "Bool" : false ,
-                                    "Text" : "" 
-                                },
-                                "ModelTime" : {
-                                    "Active" : true ,
-                                    "Enabled" : true ,
-                                    "Size" : 44 ,
-                                    "Family" : "Arial" ,
-                                    "Style" : 0 ,
-                                    "Color" : "#000000FF" ,
-                                    "Bool" : false ,
-                                    "Text" : "" 
-                                },
-                                "ViewDip" : false 
-                            },
-                            "Movie" : false ,
-                            "NextMovieIndex" : 1 ,
-                            "JobTitle" : {
-                                "Active" : true ,
-                                "Enabled" : true ,
-                                "Size" : 12 ,
-                                "Family" : "Arial" ,
-                                "Style" : 0 ,
-                                "Color" : "#000000FF" ,
-                                "Bool" : false ,
-                                "Text" : "" 
-                            },
-                            "ViewTitle" : {
-                                "Active" : true ,
-                                "Enabled" : true ,
-                                "Size" : 12 ,
-                                "Family" : "Arial" ,
-                                "Style" : 0 ,
-                                "Color" : "#000000FF" ,
-                                "Bool" : false ,
-                                "Text" : "Plot Title" 
-                            },
-                            "Target" : true 
-                        },
-                        "PlotItems" : [ 
-                            {
-                                "Name" : "history" ,
-                                "Item" : {
-                                    "Active" : true ,
-                                    "Type" : 0 ,
-                                    "PIActive" : true ,
-                                    "ShowCaption" : true ,
-                                    "Title" : {
-                                        "Active" : true ,
-                                        "Enabled" : true ,
-                                        "Size" : 55 ,
-                                        "Family" : "Times New Roman" ,
-                                        "Style" : 1 ,
-                                        "Color" : "#000000FF" ,
-                                        "Bool" : true ,
-                                        "Text" : "" 
-                                    },
-                                    "Transparency" : 70 ,
-                                    "TransActive" : false ,
-                                    "TransLocked" : true ,
-                                    "Range" : [  ],
-                                    "Chart" : {
-                                        "Active" : true ,
-                                        "Chart" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Grid" : {
-                                                "Active" : true ,
-                                                "Enabled" : true ,
-                                                "Width" : 1 ,
-                                                "Style" : 1 ,
-                                                "Color" : "#000000FF" ,
-                                                "Bool" : false 
-                                            },
-                                            "Width" : 2 ,
-                                            "Box" : false ,
-                                            "Color" : "#000000FF" ,
-                                            "Position" : {
-                                                "X" : 1 ,
-                                                "Y" : 1 
-                                            },
-                                            "Size" : {
-                                                "Width" : 98 ,
-                                                "Height" : 98 
-                                            }
-                                        },
-                                        "XAxis" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Log" : false ,
-                                            "Minimum" : -8.560443499344359e+301 ,
-                                            "Maximum" : 8.560443499344359e+301 ,
-                                            "MinAuto" : true ,
-                                            "MaxAuto" : true ,
-                                            "Alias" : "X-Axis" ,
-                                            "Inside" : true ,
-                                            "Exponent" : {
-                                                "Active" : true ,
-                                                "Enabled" : true ,
-                                                "Show" : true ,
-                                                "Value" : 301 ,
-                                                "Auto" : true 
-                                            }
-                                        },
-                                        "YAxis" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Log" : false ,
-                                            "Minimum" : -8.560443499344359e+301 ,
-                                            "Maximum" : 8.560443499344359e+301 ,
-                                            "MinAuto" : true ,
-                                            "MaxAuto" : true ,
-                                            "Alias" : "Y-Axis" ,
-                                            "Inside" : true ,
-                                            "Exponent" : {
-                                                "Active" : true ,
-                                                "Enabled" : true ,
-                                                "Show" : true ,
-                                                "Value" : 301 ,
-                                                "Auto" : true 
-                                            }
-                                        },
-                                        "Title" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Size" : 25 ,
-                                            "Family" : "Arial" ,
-                                            "Style" : 1 ,
-                                            "Color" : "#000000FF" ,
-                                            "Bool" : true ,
-                                            "Text" : "" 
-                                        },
-                                        "Labels" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Size" : 20 ,
-                                            "Family" : "Times New Roman" ,
-                                            "Style" : 1 ,
-                                            "Color" : "#000000FF" ,
-                                            "Bool" : true ,
-                                            "Text" : "" 
-                                        },
-                                        "Marks" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Size" : 18 ,
-                                            "Family" : "Times New Roman" ,
-                                            "Style" : 0 ,
-                                            "Color" : "#000000FF" ,
-                                            "Bool" : true ,
-                                            "Text" : "" 
-                                        },
-                                        "SeriesCaption" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Size" : 44 ,
-                                            "Family" : "Arial" ,
-                                            "Style" : 0 ,
-                                            "Color" : "#000000FF" ,
-                                            "Bool" : true ,
-                                            "Text" : "" 
-                                        },
-                                        "RangeCaption" : false ,
-                                        "Series" : [ 
-                                            {
-                                                "Active" : true ,
-                                                "Enabled" : true ,
-                                                "Style" : 0 ,
-                                                "Name" : "1" ,
-                                                "Alias" : "" ,
-                                                "XReversed" : false ,
-                                                "YReversed" : false ,
-                                                "Line" : {
-                                                    "Active" : true ,
-                                                    "Enabled" : true ,
-                                                    "Width" : 2 ,
-                                                    "Style" : 1 ,
-                                                    "Color" : "#00ffffFF" ,
-                                                    "Bool" : true 
-                                                },
-                                                "Mark" : {
-                                                    "Active" : true ,
-                                                    "Enabled" : true ,
-                                                    "Color" : "#00ffffFF" ,
-                                                    "Size" : 2 ,
-                                                    "Type" : 0 
-                                                },
-                                                "ID" : "1" 
-                                            }
-                                        ]
-                                    },
-                                    "Begin" : 0 ,
-                                    "End" : 0 ,
-                                    "Skip" : 0 ,
-                                    "Vs" : "2" ,
-                                    "VsReversed" : false ,
-                                    "VsCaption" : false ,
-                                    "VsText" : {
-                                        "Active" : true ,
-                                        "Enabled" : true ,
-                                        "Size" : 44 ,
-                                        "Family" : "Arial" ,
-                                        "Style" : 0 ,
-                                        "Color" : "#000000FF" ,
-                                        "Bool" : true ,
-                                        "Text" : "" 
-                                    }
-                                }
-                            }
-                        ],
-                        "ID" : 3 ,
-                        "Name" : "Unbalanced Force" 
-                    }, 
-                    {
-                        "View" : {
-                            "Locked" : false ,
-                            "Perspective" : true ,
-                            "EyePosition" : { "x" : 0.000000000000000e+00  , "y" : -4.989988731790440e+00  , "z" : 0.000000000000000e+00 } ,
-                            "ViewCenter" : { "x" : 0.000000000000000e+00  , "y" : 0.000000000000000e+00  , "z" : 0.000000000000000e+00 } ,
-                            "Up" : { "x" : 0.000000000000000e+00  , "y" : 0.000000000000000e+00  , "z" : 1.000000000000000e+00 } ,
-                            "Magnification" : 1.000000000000000e+00 ,
-                            "FirstViewAuto" : false ,
-                            "MinClipPlaneDist" : -1.000000000000000e+10 ,
-                            "MaxClipPlaneDist" : 1.000000000000000e+10 ,
-                            "SpecAsOrientation" : false ,
-                            "OrientationIn" : { "x" : 0.000000000000000e+00  , "y" : 0.000000000000000e+00  , "z" : 0.000000000000000e+00 } ,
-                            "SyncToName" : "Unsynced" 
-                        },
-                        "Properties" : {
-                            "AutoUpdate" : true ,
-                            "Outline" : {
-                                "Active" : true ,
-                                "Enabled" : true ,
-                                "Width" : 2 ,
-                                "Style" : 1 ,
-                                "Color" : "#000000FF" ,
-                                "Bool" : true 
-                            },
-                            "Background" : "#ffffffFF" ,
-                            "Active" : true ,
-                            "Legend" : {
-                                "Active" : true ,
-                                "Placement" : 0 ,
-                                "TargetSize" : {
-                                    "Width" : 25 ,
-                                    "Height" : 50 
-                                },
-                                "Position" : {
-                                    "X" : 66 ,
-                                    "Y" : 40 
-                                },
-                                "Title" : {
-                                    "Active" : true ,
-                                    "Enabled" : true ,
-                                    "Size" : 55 ,
-                                    "Family" : "Times New Roman" ,
-                                    "Style" : 1 ,
-                                    "Color" : "#000000FF" ,
-                                    "Bool" : true ,
-                                    "Text" : "" 
-                                },
-                                "Caption" : {
-                                    "Active" : true ,
-                                    "Enabled" : true ,
-                                    "Size" : 44 ,
-                                    "Family" : "Arial" ,
-                                    "Style" : 0 ,
-                                    "Color" : "#000000FF" ,
-                                    "Bool" : true ,
-                                    "Text" : "" 
-                                },
-                                "Heading" : {
-                                    "Active" : true ,
-                                    "Enabled" : true ,
-                                    "Size" : 94 ,
-                                    "Family" : "Times New Roman" ,
-                                    "Style" : 3 ,
-                                    "Color" : "#000000FF" ,
-                                    "Bool" : true ,
-                                    "Text" : "" 
-                                },
-                                "Copyright" : {
-                                    "Active" : true ,
-                                    "Enabled" : true ,
-                                    "Size" : 40 ,
-                                    "Family" : "Arial" ,
-                                    "Style" : 0 ,
-                                    "Color" : "#000000FF" ,
-                                    "Bool" : true ,
-                                    "Text" : "" 
-                                },
-                                "Step" : {
-                                    "Active" : true ,
-                                    "Enabled" : true ,
-                                    "Size" : 44 ,
-                                    "Family" : "Arial" ,
-                                    "Style" : 0 ,
-                                    "Color" : "#000000FF" ,
-                                    "Bool" : false ,
-                                    "Text" : "" 
-                                },
-                                "Time" : {
-                                    "Active" : true ,
-                                    "Enabled" : true ,
-                                    "Size" : 44 ,
-                                    "Family" : "Arial" ,
-                                    "Style" : 0 ,
-                                    "Color" : "#000000FF" ,
-                                    "Bool" : false ,
-                                    "Text" : "" 
-                                },
-                                "Customer" : {
-                                    "Active" : true ,
-                                    "Enabled" : true ,
-                                    "Size" : 44 ,
-                                    "Family" : "Arial" ,
-                                    "Style" : 0 ,
-                                    "Color" : "#000000FF" ,
-                                    "Bool" : false ,
-                                    "Text" : "" 
-                                },
-                                "View" : {
-                                    "Active" : true ,
-                                    "Enabled" : true ,
-                                    "Size" : 44 ,
-                                    "Family" : "Arial" ,
-                                    "Style" : 0 ,
-                                    "Color" : "#000000FF" ,
-                                    "Bool" : false ,
-                                    "Text" : "" 
-                                },
-                                "ModelTime" : {
-                                    "Active" : true ,
-                                    "Enabled" : true ,
-                                    "Size" : 44 ,
-                                    "Family" : "Arial" ,
-                                    "Style" : 0 ,
-                                    "Color" : "#000000FF" ,
-                                    "Bool" : false ,
-                                    "Text" : "" 
-                                },
-                                "ViewDip" : false 
-                            },
-                            "Movie" : false ,
-                            "NextMovieIndex" : 1 ,
-                            "JobTitle" : {
-                                "Active" : true ,
-                                "Enabled" : true ,
-                                "Size" : 12 ,
-                                "Family" : "Arial" ,
-                                "Style" : 0 ,
-                                "Color" : "#000000FF" ,
-                                "Bool" : false ,
-                                "Text" : "" 
-                            },
-                            "ViewTitle" : {
-                                "Active" : true ,
-                                "Enabled" : true ,
-                                "Size" : 12 ,
-                                "Family" : "Arial" ,
-                                "Style" : 0 ,
-                                "Color" : "#000000FF" ,
-                                "Bool" : false ,
-                                "Text" : "Plot Title" 
-                            },
-                            "Target" : true 
-                        },
-                        "PlotItems" : [ 
-                            {
-                                "Name" : "history" ,
-                                "Item" : {
-                                    "Active" : false ,
-                                    "Type" : 0 ,
-                                    "PIActive" : false ,
-                                    "ShowCaption" : true ,
-                                    "Title" : {
-                                        "Active" : true ,
-                                        "Enabled" : true ,
-                                        "Size" : 55 ,
-                                        "Family" : "Times New Roman" ,
-                                        "Style" : 1 ,
-                                        "Color" : "#000000FF" ,
-                                        "Bool" : true ,
-                                        "Text" : "" 
-                                    },
-                                    "Transparency" : 70 ,
-                                    "TransActive" : false ,
-                                    "TransLocked" : true ,
-                                    "Range" : [  ],
-                                    "Chart" : {
-                                        "Active" : true ,
-                                        "Chart" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Grid" : {
-                                                "Active" : true ,
-                                                "Enabled" : true ,
-                                                "Width" : 1 ,
-                                                "Style" : 1 ,
-                                                "Color" : "#000000FF" ,
-                                                "Bool" : false 
-                                            },
-                                            "Width" : 2 ,
-                                            "Box" : false ,
-                                            "Color" : "#000000FF" ,
-                                            "Position" : {
-                                                "X" : 1 ,
-                                                "Y" : 1 
-                                            },
-                                            "Size" : {
-                                                "Width" : 98 ,
-                                                "Height" : 98 
-                                            }
-                                        },
-                                        "XAxis" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Log" : false ,
-                                            "Minimum" : 1.723671100636033e+00 ,
-                                            "Maximum" : 1.761322353694829e+00 ,
-                                            "MinAuto" : true ,
-                                            "MaxAuto" : true ,
-                                            "Alias" : "X-Axis" ,
-                                            "Inside" : true ,
-                                            "Exponent" : {
-                                                "Active" : true ,
-                                                "Enabled" : true ,
-                                                "Show" : true ,
-                                                "Value" : 0 ,
-                                                "Auto" : true 
-                                            }
-                                        },
-                                        "YAxis" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Log" : false ,
-                                            "Minimum" : -5.991162867240713e-04 ,
-                                            "Maximum" : 1.441984963503776e-05 ,
-                                            "MinAuto" : true ,
-                                            "MaxAuto" : true ,
-                                            "Alias" : "Y-Axis" ,
-                                            "Inside" : true ,
-                                            "Exponent" : {
-                                                "Active" : true ,
-                                                "Enabled" : true ,
-                                                "Show" : true ,
-                                                "Value" : -4 ,
-                                                "Auto" : true 
-                                            }
-                                        },
-                                        "Title" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Size" : 25 ,
-                                            "Family" : "Arial" ,
-                                            "Style" : 1 ,
-                                            "Color" : "#000000FF" ,
-                                            "Bool" : true ,
-                                            "Text" : "" 
-                                        },
-                                        "Labels" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Size" : 20 ,
-                                            "Family" : "Times New Roman" ,
-                                            "Style" : 1 ,
-                                            "Color" : "#000000FF" ,
-                                            "Bool" : true ,
-                                            "Text" : "" 
-                                        },
-                                        "Marks" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Size" : 18 ,
-                                            "Family" : "Times New Roman" ,
-                                            "Style" : 0 ,
-                                            "Color" : "#000000FF" ,
-                                            "Bool" : true ,
-                                            "Text" : "" 
-                                        },
-                                        "SeriesCaption" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Size" : 44 ,
-                                            "Family" : "Arial" ,
-                                            "Style" : 0 ,
-                                            "Color" : "#000000FF" ,
-                                            "Bool" : true ,
-                                            "Text" : "" 
-                                        },
-                                        "RangeCaption" : false ,
-                                        "Series" : [ 
-                                            {
-                                                "Active" : true ,
-                                                "Enabled" : true ,
-                                                "Style" : 0 ,
-                                                "Name" : "15 C10_Corner" ,
-                                                "Alias" : "" ,
-                                                "XReversed" : false ,
-                                                "YReversed" : false ,
-                                                "Line" : {
-                                                    "Active" : true ,
-                                                    "Enabled" : true ,
-                                                    "Width" : 2 ,
-                                                    "Style" : 1 ,
-                                                    "Color" : "#00ffffFF" ,
-                                                    "Bool" : true 
-                                                },
-                                                "Mark" : {
-                                                    "Active" : true ,
-                                                    "Enabled" : true ,
-                                                    "Color" : "#00ffffFF" ,
-                                                    "Size" : 2 ,
-                                                    "Type" : 0 
-                                                },
-                                                "ID" : "15" 
-                                            }
-                                        ]
-                                    },
-                                    "Begin" : 0 ,
-                                    "End" : 0 ,
-                                    "Skip" : 0 ,
-                                    "Vs" : "2" ,
-                                    "VsReversed" : false ,
-                                    "VsCaption" : false ,
-                                    "VsText" : {
-                                        "Active" : true ,
-                                        "Enabled" : true ,
-                                        "Size" : 44 ,
-                                        "Family" : "Arial" ,
-                                        "Style" : 0 ,
-                                        "Color" : "#000000FF" ,
-                                        "Bool" : true ,
-                                        "Text" : "" 
-                                    }
-                                }
-                            }, 
-                            {
-                                "Name" : "history" ,
-                                "Item" : {
-                                    "Active" : true ,
-                                    "Type" : 0 ,
-                                    "PIActive" : true ,
-                                    "ShowCaption" : true ,
-                                    "Title" : {
-                                        "Active" : true ,
-                                        "Enabled" : true ,
-                                        "Size" : 55 ,
-                                        "Family" : "Times New Roman" ,
-                                        "Style" : 1 ,
-                                        "Color" : "#000000FF" ,
-                                        "Bool" : true ,
-                                        "Text" : "" 
-                                    },
-                                    "Transparency" : 70 ,
-                                    "TransActive" : false ,
-                                    "TransLocked" : true ,
-                                    "Range" : [  ],
-                                    "Chart" : {
-                                        "Active" : true ,
-                                        "Chart" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Grid" : {
-                                                "Active" : true ,
-                                                "Enabled" : true ,
-                                                "Width" : 1 ,
-                                                "Style" : 1 ,
-                                                "Color" : "#000000FF" ,
-                                                "Bool" : false 
-                                            },
-                                            "Width" : 2 ,
-                                            "Box" : false ,
-                                            "Color" : "#000000FF" ,
-                                            "Position" : {
-                                                "X" : 1 ,
-                                                "Y" : 1 
-                                            },
-                                            "Size" : {
-                                                "Width" : 98 ,
-                                                "Height" : 98 
-                                            }
-                                        },
-                                        "XAxis" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Log" : false ,
-                                            "Minimum" : -8.560443499344359e+301 ,
-                                            "Maximum" : 8.560443499344359e+301 ,
-                                            "MinAuto" : true ,
-                                            "MaxAuto" : true ,
-                                            "Alias" : "X-Axis" ,
-                                            "Inside" : true ,
-                                            "Exponent" : {
-                                                "Active" : true ,
-                                                "Enabled" : true ,
-                                                "Show" : true ,
-                                                "Value" : 301 ,
-                                                "Auto" : true 
-                                            }
-                                        },
-                                        "YAxis" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Log" : false ,
-                                            "Minimum" : -8.560443499344359e+301 ,
-                                            "Maximum" : 8.560443499344359e+301 ,
-                                            "MinAuto" : true ,
-                                            "MaxAuto" : true ,
-                                            "Alias" : "Y-Axis" ,
-                                            "Inside" : true ,
-                                            "Exponent" : {
-                                                "Active" : true ,
-                                                "Enabled" : true ,
-                                                "Show" : true ,
-                                                "Value" : 301 ,
-                                                "Auto" : true 
-                                            }
-                                        },
-                                        "Title" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Size" : 25 ,
-                                            "Family" : "Arial" ,
-                                            "Style" : 1 ,
-                                            "Color" : "#000000FF" ,
-                                            "Bool" : true ,
-                                            "Text" : "" 
-                                        },
-                                        "Labels" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Size" : 20 ,
-                                            "Family" : "Times New Roman" ,
-                                            "Style" : 1 ,
-                                            "Color" : "#000000FF" ,
-                                            "Bool" : true ,
-                                            "Text" : "" 
-                                        },
-                                        "Marks" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Size" : 18 ,
-                                            "Family" : "Times New Roman" ,
-                                            "Style" : 0 ,
-                                            "Color" : "#000000FF" ,
-                                            "Bool" : true ,
-                                            "Text" : "" 
-                                        },
-                                        "SeriesCaption" : {
-                                            "Active" : true ,
-                                            "Enabled" : true ,
-                                            "Size" : 44 ,
-                                            "Family" : "Arial" ,
-                                            "Style" : 0 ,
-                                            "Color" : "#000000FF" ,
-                                            "Bool" : true ,
-                                            "Text" : "" 
-                                        },
-                                        "RangeCaption" : false ,
-                                        "Series" : [ 
-                                            {
-                                                "Active" : true ,
-                                                "Enabled" : true ,
-                                                "Style" : 0 ,
-                                                "Name" : "21" ,
-                                                "Alias" : "" ,
-                                                "XReversed" : false ,
-                                                "YReversed" : false ,
-                                                "Line" : {
-                                                    "Active" : true ,
-                                                    "Enabled" : true ,
-                                                    "Width" : 2 ,
-                                                    "Style" : 1 ,
-                                                    "Color" : "#00ffffFF" ,
-                                                    "Bool" : true 
-                                                },
-                                                "Mark" : {
-                                                    "Active" : true ,
-                                                    "Enabled" : true ,
-                                                    "Color" : "#00ffffFF" ,
-                                                    "Size" : 2 ,
-                                                    "Type" : 0 
-                                                },
-                                                "ID" : "21" 
-                                            }
-                                        ]
-                                    },
-                                    "Begin" : 0 ,
-                                    "End" : 0 ,
-                                    "Skip" : 0 ,
-                                    "Vs" : "2" ,
-                                    "VsReversed" : false ,
-                                    "VsCaption" : false ,
-                                    "VsText" : {
-                                        "Active" : true ,
-                                        "Enabled" : true ,
-                                        "Size" : 44 ,
-                                        "Family" : "Arial" ,
-                                        "Style" : 0 ,
-                                        "Color" : "#000000FF" ,
-                                        "Bool" : true ,
-                                        "Text" : "" 
-                                    }
-                                }
-                            }
-                        ],
-                        "ID" : 4 ,
-                        "Name" : "C12_17_Velocity" 
                     }
                 ],
                 "Entry" : {
@@ -3182,7 +3182,7 @@
     ],
     "Terminal" : {
         "MoveLists" : true ,
-        "LineLimit" : 10 
+        "LineLimit" : 13 
     },
     "ColorMap" : {
         "EMaps" : [ 
@@ -3192,15 +3192,7 @@
             }, 
             {
                 "Key" : "Group" ,
-                "Value" : [ 
-                    {
-                        "Key" : "Default=fix" ,
-                        "Value" : {
-                            "Color" : "#4f632dFF" ,
-                            "Alias" : "" 
-                        }
-                    }
-                ]
+                "Value" : [  ]
             }, 
             {
                 "Key" : "Property density" ,
@@ -3211,11 +3203,11 @@
     "Layout" : {
         "PaneAction" : [ 
             "IPython Console  " ,
-            "Console" ,
-            "Project" 
+            "Project" ,
+            "Console" 
         ],
-        "State" : "AAAA/wAAAAD9AAAAAQAAAAAAAAYMAAADuvwCAAAAAvwAAAAdAAADRwAAAPIA/////AEAAAAC+wAAAB4AUAByAG8AagBlAGMAdABfAFAAcgBvAGoAZQBjAHQBAAAAAAAAAYMAAABoAP////wAAAGHAAAEhQAAAWcA/////AIAAAAC/AAAAB0AAAJ1AAAAdAEAABf6AAAAAwEAAAAY+wAAABYAUABsAG8AdABfAFAAbABvAHQAMAAxAQAAAAD/////AAAAAAAAAAD7AAAAFgBQAGwAbwB0AF8AUABsAG8AdAAwADEBAAAAAP////8AAAAAAAAAAPsAAAAWAEUAZABpAHQAbwByAF8ATQBhAGkAbgEAAAAA/////wAAAKMA////+wAAADQAUABsAG8AdABfAEgARABfAFUAbgBkAGUAcgAgAGMAbwBuAHMAdAByAHUAYwB0AGkAbwBuAQAAAAD/////AAAA9wD////7AAAAKgBQAGwAbwB0AF8AVQBuAGIAYQBsAGEAbgBjAGUAZAAgAEYAbwByAGMAZQEAAAAA/////wAAANoA////+wAAACYARQBkAGkAdABvAHIAXwBmAG8AcgBjAGUAXwBwAHkAdABoAG8AbgEAAAAA/////wAAATMA////+wAAAC4ARQBkAGkAdABvAHIAXwBPAHUAdABwAHUAdABVAG4AYgBhAGwAYQBuAGMAZQBkAQAAAAD/////AAAAAAAAAAD7AAAANABFAGQAaQB0AG8AcgBfAE8AdQB0AHAAdQB0AFUAbgBiAGEAbABhAG4AYwBlAGQASABpAHMBAAAAAP////8AAAFnAP////sAAAAeAEUAZABpAHQAbwByAF8AUQB1AGUAcwB0AGkAbwBuAQAAAAD/////AAAAAAAAAAD7AAAAIgBQAGwAbwB0AF8AQwAxADIAXwBWAGUAbABvAGMAaQB0AHkBAAAAAP////8AAAAAAAAAAPsAAAAiAFAAbABvAHQAXwBDADIAMwBfAFYAZQBsAG8AYwBpAHQAeQEAAAAA/////wAAAAAAAAAA+wAAACIAUABsAG8AdABfAEMAMwA2AF8AVgBlAGwAbwBjAGkAdAB5AQAAAAD/////AAAAAAAAAAD7AAAAIgBQAGwAbwB0AF8AQwA0ADgAXwBWAGUAbABvAGMAaQB0AHkBAAAAAP////8AAAAAAAAAAPsAAAAiAFAAbABvAHQAXwBDADYAMABfAFYAZQBsAG8AYwBpAHQAeQEAAAAA/////wAAAAAAAAAA+wAAACIAUABsAG8AdABfAEMANwAzAF8AVgBlAGwAbwBjAGkAdAB5AQAAAAD/////AAAAAAAAAAD7AAAAMABQAGwAbwB0AF8AQwAxADgAXwAzADUARABvAHcAbgBfAFYAZQBsAG8AYwBpAHQAeQEAAAAA/////wAAAAAAAAAA+wAAACwAUABsAG8AdABfAEMAMQA4AF8AMwA1AFUAcABfAFYAZQBsAG8AYwBpAHQAeQEAAAAA/////wAAAAAAAAAA+wAAADAAUABsAG8AdABfAEMAMwA2AF8ANQAzAEQAbwB3AG4AXwBWAGUAbABvAGMAaQB0AHkBAAAAAP////8AAAAAAAAAAPsAAAAsAFAAbABvAHQAXwBDADMANgBfADUAMwBVAHAAXwBWAGUAbABvAGMAaQB0AHkBAAAAAP////8AAAAAAAAAAPsAAAAoAFAAbABvAHQAXwBDADUANAAtADcAMQBfAFYAZQBsAG8AYwBpAHQAeQEAAAAA/////wAAAAAAAAAA+wAAACAAUABsAG8AdABfAEMAMgBfAFYAZQBsAG8AYwBpAHQAeQEAAAAA/////wAAAAAAAAAA+wAAACgAUABsAG8AdABfAEMAMQAyAF8AMQA3AF8AVgBlAGwAbwBjAGkAdAB5AQAAAAD/////AAAA0gD////7AAAAOgBFAGQAaQB0AG8AcgBfAEUAcQB1AGkAbABpAGIAcgBpAHUAbQBfAGMAbwBtAHAAbABlAHQAZQBkACABAAAAAP////8AAAEOAP////sAAAAwAEUAZABpAHQAbwByAF8AYQBuAGEAbAB5AHMAaQBzAF8AZgB1AG4AYwB0AGkAbwBuAQAAAAD/////AAAAAAAAAAD7AAAAHgBDAG8AbgBzAG8AbABlAF8AQwBvAG4AcwBvAGwAZQEAAAKWAAAAzgAAAG8A////+wAAAEYASQBQAHkAdABoAG8AbgAgAEMAbwBuAHMAbwBsAGUAIAAgAF8ASQBQAHkAdABoAG8AbgAgAEMAbwBuAHMAbwBsAGUAIAAgAQAAA2gAAABvAAAAWwD///8AAAFwAAADugAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAKgBNAGEAaQBuAFcAaQBuAGQAbwB3AE0AZQBuAHUAVABvAG8AbABCAGEAcgEAAAAAAAACgwAAAAAAAAAAAAAALgBNAGEAaQBuAFcAaQBuAGQAbwB3AE0AbwBkAHUAbABlAFQAbwBvAGwAQgBhAHIBAAACgwAABIgAAAAAAAAAAA==" 
+        "State" : "AAAA/wAAAAD9AAAAAQAAAAAAAAaBAAADuvwCAAAAAvwAAAAdAAACywAAAPIA/////AEAAAAC+wAAAB4AUAByAG8AagBlAGMAdABfAFAAcgBvAGoAZQBjAHQBAAAAAAAAAU8AAABoAP////wAAAFTAAAFLgAAAWcA/////AIAAAAC/AAAAB0AAAHDAAAAdAEAABf6AAAAAgEAAAAI+wAAABYAUABsAG8AdABfAFAAbABvAHQAMAAxAQAAAAD/////AAAAAAAAAAD7AAAAKgBQAGwAbwB0AF8AVQBuAGIAYQBsAGEAbgBjAGUAZAAgAEYAbwByAGMAZQEAAAAA/////wAAANoA////+wAAABYARQBkAGkAdABvAHIAXwBNAGEAaQBuAQAAAAD/////AAAAqQD////7AAAAJgBFAGQAaQB0AG8AcgBfAGYAbwByAGMAZQBfAHAAeQB0AGgAbwBuAQAAAAD/////AAABMwD////7AAAANABFAGQAaQB0AG8AcgBfAE8AdQB0AHAAdQB0AFUAbgBiAGEAbABhAG4AYwBlAGQASABpAHMBAAAAAP////8AAAFnAP////sAAAA6AEUAZABpAHQAbwByAF8ARQBxAHUAaQBsAGkAYgByAGkAdQBtAF8AYwBvAG0AcABsAGUAdABlAGQAIAEAAAAA/////wAAAQ4A////+wAAACgAUABsAG8AdABfAEMAMQAyAF8AMQA3AF8AVgBlAGwAbwBjAGkAdAB5AQAAAAD/////AAAA0gD////7AAAANABQAGwAbwB0AF8ASABEAF8AVQBuAGQAZQByACAAYwBvAG4AcwB0AHIAdQBjAHQAaQBvAG4BAAAAAP////8AAAD3AP////sAAAAeAEMAbwBuAHMAbwBsAGUAXwBDAG8AbgBzAG8AbABlAQAAAeQAAAEEAAAAbwD////7AAAARgBJAFAAeQB0AGgAbwBuACAAQwBvAG4AcwBvAGwAZQAgACAAXwBJAFAAeQB0AGgAbwBuACAAQwBvAG4AcwBvAGwAZQAgACABAAAC7AAAAOsAAABbAP///wAAAPsAAAO6AAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAIAAAAqAE0AYQBpAG4AVwBpAG4AZABvAHcATQBlAG4AdQBUAG8AbwBsAEIAYQByAQAAAAAAAAKDAAAAAAAAAAAAAAAuAE0AYQBpAG4AVwBpAG4AZABvAHcATQBvAGQAdQBsAGUAVABvAG8AbABCAGEAcgEAAAKDAAAEiAAAAAAAAAAA" 
     },
-    "CPVisible" : false ,
+    "CPVisible" : true ,
     "PaneContents" : { }
 }

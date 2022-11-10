@@ -60,7 +60,7 @@ block property density 2000
 ; Interfaces properties
 block contact generate-subcontacts
 block contact group 'boundary'
-block contact prop stiffness-norm=1.5e8 stiffness-shear=1.5e9 friction=20 range group 'boundary'
+block contact prop stiffness-norm=1.5e8 stiffness-shear=1.5e7 friction=20 range group 'boundary'
 block contact material-table default prop stiffness-norm=1e8 stiffness-shear=1e9 friction=15
 
 ; Damping

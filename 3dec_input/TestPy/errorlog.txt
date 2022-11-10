@@ -1,0 +1,4 @@
+"3DEC 7.00.153"
+2022:11:10:18:27:22
+C:\Program Files\Itasca\3DEC700\exe64\3dec700_gui.exe
+Windows 10 Enterprise : 22000
