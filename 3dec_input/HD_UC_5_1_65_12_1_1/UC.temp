@@ -5,7 +5,7 @@
         "Version" : 7.0000000e+00 ,
         "Update" : 153 ,
         "Binary" : false ,
-        "DateTime" : "2022-11-12T11:23:59" ,
+        "DateTime" : "2022-11-12T11:46:04" ,
         "Format" : 0 ,
         "Dimension" : 3 
     },
@@ -165,7 +165,7 @@
                         "input_HD_UC_5_1_65_12_1_1.py" 
                     ]
                 },
-                "LastActive" : "C:/Users/3DEC/Documents/GitHub/scaffree_3dec/3dec_input/HD_UC_5_1_65_12_1_1/input_HD_UC_5_1_65_12_1_1.py" ,
+                "LastActive" : "C:/Users/3DEC/Documents/GitHub/scaffree_3dec/python_code/HD_UC_5_1_65_12_1_1/AnalysisFunctions_HD_UC_5_1_65_12_1_1.py" ,
                 "OpenFiles" : [ 
                     "../../python_code/HD_UC_5_1_65_12_1_1/AnalysisFunctions_HD_UC_5_1_65_12_1_1.py" ,
                     "input_HD_UC_5_1_65_12_1_1.py" 
@@ -377,9 +377,9 @@
                         "View" : {
                             "Locked" : false ,
                             "Perspective" : true ,
-                            "EyePosition" : { "x" : 1.092812794508435e+01  , "y" : 6.960151622666361e-01  , "z" : 7.650048179552596e+00 } ,
+                            "EyePosition" : { "x" : 1.003097171175764e+01  , "y" : 7.735947739496007e-01  , "z" : 9.125617253607214e+00 } ,
                             "ViewCenter" : { "x" : 2.374054321195341e+00  , "y" : 2.852171177132627e-01  , "z" : 3.483272777700160e+00 } ,
-                            "Up" : { "x" : -4.376855840855552e-01  , "y" : -5.821788824693367e-03  , "z" : 8.991092460088301e-01 } ,
+                            "Up" : { "x" : -5.925231382219613e-01  , "y" : -1.532880889319937e-02  , "z" : 8.054075727788474e-01 } ,
                             "Magnification" : 1.000000000000000e+00 ,
                             "FirstViewAuto" : false ,
                             "MinClipPlaneDist" : -1.000000000000000e+10 ,
@@ -635,7 +635,7 @@
                                             "Text" : "" 
                                         }
                                     },
-                                    "ColorScheme" : 0 ,
+                                    "ColorScheme" : 1 ,
                                     "ColorBy" : {
                                         "Active" : true ,
                                         "Enabled" : true ,
@@ -658,14 +658,14 @@
                                         "FaceLabels" : false 
                                     },
                                     "Polygons" : {
-                                        "Active" : true ,
+                                        "Active" : false ,
                                         "AttPoly" : [  ],
                                         "CutLine" : [ 
                                             {
-                                                "Active" : true ,
+                                                "Active" : false ,
                                                 "AttLine" : [ 
                                                     {
-                                                        "Active" : true ,
+                                                        "Active" : false ,
                                                         "Enabled" : true ,
                                                         "Width" : 1 ,
                                                         "Style" : 1 ,
@@ -684,143 +684,7 @@
                                                     {
                                                         "Key" : "Group" ,
                                                         "Value" : {
-                                                            "Array" : [ 
-                                                                
-                                                                {
-                                                                    "Color" : "#00ffffFF" ,
-                                                                    "Alias" : "" ,
-                                                                    "Label" : "Default=fix" ,
-                                                                    "Bool" : true ,
-                                                                    "Used2" : true ,
-                                                                    "Default" : false 
-                                                                }
-                                                                , 
-                                                                {
-                                                                    "Color" : "#2e8b56FF" ,
-                                                                    "Alias" : "" ,
-                                                                    "Label" : "Default=C1_1" ,
-                                                                    "Bool" : true ,
-                                                                    "Used2" : true ,
-                                                                    "Default" : false 
-                                                                }
-                                                                , 
-                                                                {
-                                                                    "Color" : "#ff0000FF" ,
-                                                                    "Alias" : "" ,
-                                                                    "Label" : "Default=C2_17" ,
-                                                                    "Bool" : true ,
-                                                                    "Used2" : true ,
-                                                                    "Default" : false 
-                                                                }
-                                                                , 
-                                                                {
-                                                                    "Color" : "#ff00d5FF" ,
-                                                                    "Alias" : "" ,
-                                                                    "Label" : "None" ,
-                                                                    "Bool" : true ,
-                                                                    "Used2" : false ,
-                                                                    "Default" : false 
-                                                                }
-                                                                , 
-                                                                {
-                                                                    "Color" : "#ff4000FF" ,
-                                                                    "Alias" : "" ,
-                                                                    "Label" : "Default=C18_35" ,
-                                                                    "Bool" : true ,
-                                                                    "Used2" : true ,
-                                                                    "Default" : false 
-                                                                }
-                                                                , 
-                                                                {
-                                                                    "Color" : "#0080ffFF" ,
-                                                                    "Alias" : "" ,
-                                                                    "Label" : "Default=C36_36_0" ,
-                                                                    "Bool" : true ,
-                                                                    "Used2" : false ,
-                                                                    "Default" : false 
-                                                                }
-                                                                , 
-                                                                {
-                                                                    "Color" : "#b7001fFF" ,
-                                                                    "Alias" : "" ,
-                                                                    "Label" : "Default=C36_36_1" ,
-                                                                    "Bool" : true ,
-                                                                    "Used2" : false ,
-                                                                    "Default" : false 
-                                                                }
-                                                                , 
-                                                                {
-                                                                    "Color" : "#aa00ffFF" ,
-                                                                    "Alias" : "" ,
-                                                                    "Label" : "Default=C36_36_2" ,
-                                                                    "Bool" : true ,
-                                                                    "Used2" : false ,
-                                                                    "Default" : false 
-                                                                }
-                                                                , 
-                                                                {
-                                                                    "Color" : "#ff8000FF" ,
-                                                                    "Alias" : "" ,
-                                                                    "Label" : "Default=C36_36_3" ,
-                                                                    "Bool" : true ,
-                                                                    "Used2" : false ,
-                                                                    "Default" : false 
-                                                                }
-                                                                , 
-                                                                {
-                                                                    "Color" : "#663333FF" ,
-                                                                    "Alias" : "" ,
-                                                                    "Label" : "Default=C36_36_4" ,
-                                                                    "Bool" : true ,
-                                                                    "Used2" : false ,
-                                                                    "Default" : false 
-                                                                }
-                                                                , 
-                                                                {
-                                                                    "Color" : "#4f632dFF" ,
-                                                                    "Alias" : "" ,
-                                                                    "Label" : "Default=C36_36_5" ,
-                                                                    "Bool" : true ,
-                                                                    "Used2" : false ,
-                                                                    "Default" : false 
-                                                                }
-                                                                , 
-                                                                {
-                                                                    "Color" : "#50755eFF" ,
-                                                                    "Alias" : "" ,
-                                                                    "Label" : "Default=C36_36_6" ,
-                                                                    "Bool" : true ,
-                                                                    "Used2" : false ,
-                                                                    "Default" : false 
-                                                                }
-                                                                , 
-                                                                {
-                                                                    "Color" : "#6666ffFF" ,
-                                                                    "Alias" : "" ,
-                                                                    "Label" : "Default=C36_36_7" ,
-                                                                    "Bool" : true ,
-                                                                    "Used2" : false ,
-                                                                    "Default" : false 
-                                                                }
-                                                                , 
-                                                                {
-                                                                    "Color" : "#5500ffFF" ,
-                                                                    "Alias" : "" ,
-                                                                    "Label" : "Default=C36_36_8" ,
-                                                                    "Bool" : true ,
-                                                                    "Used2" : false ,
-                                                                    "Default" : false 
-                                                                }
-                                                                , 
-                                                                {
-                                                                    "Color" : "#0000ffFF" ,
-                                                                    "Alias" : "" ,
-                                                                    "Label" : "Default=C36_36_9" ,
-                                                                    "Bool" : true ,
-                                                                    "Used2" : false ,
-                                                                    "Default" : false 
-                                                                }
-                                                            ],
+                                                            "Array" : [  ],
                                                             "Index" : false 
                                                         }
                                                     }
@@ -862,14 +726,14 @@
                                         ]
                                     },
                                     "Contour" : {
-                                        "Active" : false ,
+                                        "Active" : true ,
                                         "AttPoly" : [  ],
                                         "CutLine" : [ 
                                             {
-                                                "Active" : false ,
+                                                "Active" : true ,
                                                 "AttLine" : [ 
                                                     {
-                                                        "Active" : false ,
+                                                        "Active" : true ,
                                                         "Enabled" : true ,
                                                         "Width" : 1 ,
                                                         "Style" : 1 ,
@@ -881,12 +745,12 @@
                                         ],
                                         "AttCont" : [ 
                                             {
-                                                "Active" : false ,
+                                                "Active" : true ,
                                                 "Enabled" : true ,
                                                 "Ramp" : 0 ,
-                                                "Minimum" : 1.797693134862316e+308 ,
-                                                "Maximum" : -1.797693134862316e+308 ,
-                                                "Interval" : 0.000000000000000e+00 ,
+                                                "Minimum" : 0.000000000000000e+00 ,
+                                                "Maximum" : 2.402232029393739e-08 ,
+                                                "Interval" : 2.000000000000000e-09 ,
                                                 "MinAuto" : true ,
                                                 "MaxAuto" : true ,
                                                 "IntAuto" : true ,
@@ -911,7 +775,7 @@
                                         ]
                                     },
                                     "Data" : {
-                                        "Active" : false ,
+                                        "Active" : true ,
                                         "Enabled" : true ,
                                         "Data" : [ 
                                             {
@@ -921,8 +785,8 @@
                                                 "Extra" : 1 ,
                                                 "Stress" : false ,
                                                 "Log" : false ,
-                                                "Active" : false ,
-                                                "Keyword" : "displacement" ,
+                                                "Active" : true ,
+                                                "Keyword" : "velocity" ,
                                                 "GpData" : {
                                                     "Component" : 3 ,
                                                     "Quantity" : 0 ,
@@ -930,8 +794,8 @@
                                                     "Extra" : 1 ,
                                                     "Stress" : false ,
                                                     "Log" : false ,
-                                                    "Active" : false ,
-                                                    "Keyword" : "displacement" 
+                                                    "Active" : true ,
+                                                    "Keyword" : "velocity" 
                                                 },
                                                 "ZoneData" : {
                                                     "Component" : 3 ,
@@ -940,7 +804,7 @@
                                                     "Extra" : 1 ,
                                                     "Stress" : false ,
                                                     "Log" : false ,
-                                                    "Active" : false ,
+                                                    "Active" : true ,
                                                     "Keyword" : "" ,
                                                     "Property" : "" 
                                                 },
@@ -960,7 +824,7 @@
                                                     "Extra" : 1 ,
                                                     "Stress" : false ,
                                                     "Log" : false ,
-                                                    "Active" : false ,
+                                                    "Active" : true ,
                                                     "Keyword" : "" 
                                                 }
                                             }
@@ -976,8 +840,8 @@
                                                     "Extra" : 1 ,
                                                     "Stress" : false ,
                                                     "Log" : false ,
-                                                    "Active" : false ,
-                                                    "Keyword" : "displacement" 
+                                                    "Active" : true ,
+                                                    "Keyword" : "velocity" 
                                                 }
                                             ]
                                         },
@@ -992,7 +856,7 @@
                                                     "Extra" : 1 ,
                                                     "Stress" : false ,
                                                     "Log" : false ,
-                                                    "Active" : false ,
+                                                    "Active" : true ,
                                                     "Keyword" : "" ,
                                                     "Property" : "" 
                                                 }
@@ -1030,7 +894,7 @@
                                                     "Extra" : 1 ,
                                                     "Stress" : false ,
                                                     "Log" : false ,
-                                                    "Active" : false ,
+                                                    "Active" : true ,
                                                     "Keyword" : "" 
                                                 }
                                             ]
@@ -1496,7 +1360,7 @@
     ],
     "Terminal" : {
         "MoveLists" : true ,
-        "LineLimit" : 15 
+        "LineLimit" : 8 
     },
     "ColorMap" : {
         "EMaps" : [ 
@@ -1728,7 +1592,7 @@
             "IPython Console  " ,
             "Console" 
         ],
-        "State" : "AAAA/wAAAAD9AAAAAQAAAAAAAAYMAAADuvwCAAAAAvwAAAAdAAACygAAAPIA/////AEAAAAC+wAAAB4AUAByAG8AagBlAGMAdABfAFAAcgBvAGoAZQBjAHQBAAAAAAAAAcQAAABsAP////wAAAHIAAAERAAAAnkA/////AIAAAAC/AAAAB0AAALKAAAAdAEAABf6AAAACgEAAAAN+wAAABYAUABsAG8AdABfAFAAbABvAHQAMAAxAQAAAAD/////AAAAAAAAAAD7AAAAMgBFAGQAaQB0AG8AcgBfAGEAbgBhAGwAeQBzAGkAcwBfAGYAdQBuAGMAdABpAG8AbgBzAQAAAAD/////AAAAAAAAAAD7AAAAEABFAGQAaQB0AG8AcgBfAGEBAAAAAP////8AAAAAAAAAAPsAAAAWAEUAZABpAHQAbwByAF8AbQBhAGkAbgEAAAAA/////wAAAAAAAAAA+wAAABYARQBkAGkAdABvAHIAXwBmAGkAYgBvAQAAAAD/////AAAAAAAAAAD7AAAAFgBFAGQAaQB0AG8AcgBfAGMAYQBjAGEBAAAAAP////8AAAAAAAAAAPsAAAA0AEUAZABpAHQAbwByAF8ASABEAF8AVQBDAF8ANQBfADEAXwA2ADUAXwAxADIAXwAxAF8AMQEAAAAA/////wAAAAAAAAAA+wAAADoARQBkAGkAdABvAHIAXwBBAEYAXwBIAEQAXwBVAEMAXwA1AF8AMQBfADYANQBfADEAMgBfADEAXwAxAQAAAAD/////AAAAAAAAAAD7AAAAQABFAGQAaQB0AG8AcgBfAEkAbgBwAHUAdABfAEgARABfAFUAQwBfADUAXwAxAF8ANgA1AF8AMQAyAF8AMQBfADEBAAAAAP////8AAAAAAAAAAPsAAABYAEUAZABpAHQAbwByAF8AQQBuAGEAbAB5AHMAaQBzAEYAdQBuAGMAdABpAG8AbgBzAF8ASABEAF8AVQBDAF8ANQBfADEAXwA2ADUAXwAxADIAXwAxAF8AMQEAAAAA/////wAAAnkA////+wAAAEAARQBkAGkAdABvAHIAXwBpAG4AcAB1AHQAXwBIAEQAXwBVAEMAXwA1AF8AMQBfADYANQBfADEAMgBfADEAXwAxAQAAAAD/////AAABMwD////7AAAANABQAGwAbwB0AF8ASABEAF8AVQBuAGQAZQByACAAYwBvAG4AcwB0AHIAdQBjAHQAaQBvAG4BAAAAAP////8AAAD3AP////sAAAAqAFAAbABvAHQAXwBVAG4AYgBhAGwAYQBuAGMAZQBkACAARgBvAHIAYwBlAQAAAAD/////AAAA2gD////7AAAAHgBDAG8AbgBzAG8AbABlAF8AQwBvAG4AcwBvAGwAZQAAAAG7AAABLQAAAK4A////+wAAAEYASQBQAHkAdABoAG8AbgAgAEMAbwBuAHMAbwBsAGUAIAAgAF8ASQBQAHkAdABoAG8AbgAgAEMAbwBuAHMAbwBsAGUAIAAgAQAAAusAAADsAAAAWwD///8AAAFwAAADugAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAKgBNAGEAaQBuAFcAaQBuAGQAbwB3AE0AZQBuAHUAVABvAG8AbABCAGEAcgEAAAAAAAACgwAAAAAAAAAAAAAALgBNAGEAaQBuAFcAaQBuAGQAbwB3AE0AbwBkAHUAbABlAFQAbwBvAGwAQgBhAHIBAAACgwAABIgAAAAAAAAAAA==" 
+        "State" : "AAAA/wAAAAD9AAAAAQAAAAAAAAYMAAADuvwCAAAAAvwAAAAdAAACywAAAPIA/////AEAAAAC+wAAAB4AUAByAG8AagBlAGMAdABfAFAAcgBvAGoAZQBjAHQBAAAAAAAAAYMAAABoAP////wAAAGHAAAEhQAAAnkA/////AIAAAAC/AAAAB0AAAIbAAAAdAEAABf6AAAABAEAAAAF+wAAABYAUABsAG8AdABfAFAAbABvAHQAMAAxAQAAAAD/////AAAAAAAAAAD7AAAAKgBQAGwAbwB0AF8AVQBuAGIAYQBsAGEAbgBjAGUAZAAgAEYAbwByAGMAZQEAAAAA/////wAAANoA////+wAAAFgARQBkAGkAdABvAHIAXwBBAG4AYQBsAHkAcwBpAHMARgB1AG4AYwB0AGkAbwBuAHMAXwBIAEQAXwBVAEMAXwA1AF8AMQBfADYANQBfADEAMgBfADEAXwAxAQAAAAD/////AAACeQD////7AAAAQABFAGQAaQB0AG8AcgBfAGkAbgBwAHUAdABfAEgARABfAFUAQwBfADUAXwAxAF8ANgA1AF8AMQAyAF8AMQBfADEBAAAAAP////8AAAEzAP////sAAAA0AFAAbABvAHQAXwBIAEQAXwBVAG4AZABlAHIAIABjAG8AbgBzAHQAcgB1AGMAdABpAG8AbgEAAAAA/////wAAAQMA////+wAAAB4AQwBvAG4AcwBvAGwAZQBfAEMAbwBuAHMAbwBsAGUBAAACPAAAAKwAAABvAP////sAAABGAEkAUAB5AHQAaABvAG4AIABDAG8AbgBzAG8AbABlACAAIABfAEkAUAB5AHQAaABvAG4AIABDAG8AbgBzAG8AbABlACAAIAEAAALsAAAA6wAAAFsA////AAABcAAAA7oAAAAEAAAABAAAAAgAAAAI/AAAAAEAAAACAAAAAgAAACoATQBhAGkAbgBXAGkAbgBkAG8AdwBNAGUAbgB1AFQAbwBvAGwAQgBhAHIBAAAAAAAAAoMAAAAAAAAAAAAAAC4ATQBhAGkAbgBXAGkAbgBkAG8AdwBNAG8AZAB1AGwAZQBUAG8AbwBsAEIAYQByAQAAAoMAAASIAAAAAAAAAAA=" 
     },
     "CPVisible" : true ,
     "PaneContents" : { }
