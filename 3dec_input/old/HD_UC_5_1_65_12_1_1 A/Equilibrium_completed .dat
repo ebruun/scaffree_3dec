@@ -1,0 +1,13 @@
+model restore '78_Final_State'
+
+block contact prop stiffness-norm=1e8 stiffness-shear=1e9 friction=25 range group 'boundary'
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+model gravity 0 0 -9.81
+model cycle  40000
+
+model save '78_Relaxed_Final_State'

@@ -1,0 +1,1865 @@
+;-----------------------------
+
+; Princeton University;
+; 191022
+;----------------------------
+
+
+; Test on Herringbone Dome Underc onstruction
+
+model new
+model large-strain on
+
+;-------------------------------------------
+
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_0_0.wrl'
+block group 'fix'
+block fix range group 'fix'
+block hide off
+
+model save '00_State'
+
+;-------------------------------------------
+
+; Plot geometry
+plot create 'HD_Under construction'
+plot item create block
+;plot item create structure-vector
+; Record fitness
+model history mechanical unbalanced-maximum ;1
+;history name '1' label 'Unbalanced Force'
+model history mechanical time-total ;2
+;history name '2' label 'Time'
+
+; Plot Unbalanced force
+plot create 'Unbalanced Force'
+plot item create chart-history history '1' vs '2'
+plot 'Unbalanced Force' export bitmap filename 'Unbalanced Force'
+
+
+;-------------------------------------------
+;-------------------------------------------
+
+;geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_1_1.wrl'
+block group 'C1_1'
+
+block hide off
+
+model save '1_1_State'
+
+; Plot Unbalanced force
+;plot create 'C2_Velocity'
+;plot item create chart-history history '3' vs '2' 
+;plot item create chart-history history '9' vs '2'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact group 'boundary'
+block contact prop stiffness-norm=1.5e8 stiffness-shear=1.5e7 friction=20 range group 'boundary'
+block contact material-table default prop stiffness-norm=1e8 stiffness-shear=1e9 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+ 
+model gravity 0 0 -9.81
+model cycle  20000  ;10000
+
+model save '1_1E_State'
+
+;-------------------------------------------
+
+;geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_2_17.wrl'
+block group 'C2_17'
+
+
+block history velocity-x position -0.13016709 -4.97088 2.38948 ; 3 middle of sail C2
+block history velocity-y position -0.13016709 -4.97088 2.38948
+block history velocity-z position -0.13016709 -4.97088 2.38948
+block history displacement-x position -0.13016709 -4.97088 2.38948
+block history displacement-y position -0.13016709 -4.97088 2.38948
+block history displacement-z position -0.13016709 -4.97088 2.38948
+
+block history velocity-x position 1.160826 -4.83519 2.38948 ; 9 corner C2
+block history velocity-y position 1.160826 -4.83519 2.38948
+block history velocity-z position 1.160826 -4.83519 2.38948
+block history displacement-x position 1.160826 -4.83519 2.38948
+block history displacement-y position 1.160826 -4.83519 2.38948
+block history displacement-z position 1.160826 -4.83519 2.38948
+
+history name '3' label 'C2_MiddleSail'
+history name '9' label 'C2_Corner'
+
+block history velocity-x position 0.96932 -4.560314 2.94957 ; 15 middle of sail 
+block history velocity-y position 0.96932 -4.560314 2.94957
+block history velocity-z position 0.96932 -4.560314 2.94957
+block history displacement-x position 0.96932 -4.560314 2.94957
+block history displacement-y position 0.96932 -4.560314 2.94957
+block history displacement-z position 0.96932 -4.560314 2.94957
+
+
+block history velocity-x position -0.12204 -4.66059 2.94957 ; 21 corner 
+block history velocity-y position -0.12204 -4.66059 2.94957
+block history velocity-z position -0.12204 -4.66059 2.94957
+block history displacement-x position -0.12204 -4.66059 2.94957
+block history displacement-y position -0.12204 -4.66059 2.94957
+block history displacement-z position -0.12204 -4.66059 2.94957
+
+history name '15' label 'C10_Corner'
+history name '21' label 'C10_MiddleSail'
+
+;plot create 'C12_17_Velocity'
+;plot item create chart-history history '15' vs '2' 
+;plot item create chart-history history '21' vs '2' 
+
+block hide off
+
+model save '2_17_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+ 
+model gravity 0 0 -9.81
+model cycle  40000  ;10000
+
+model save '2_17E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_18_35.wrl'
+block group 'C18_35'
+
+block history velocity-x position -0.113319 -4.327515 3.41991 ; 27 middle of sail 
+block history velocity-y position -0.113319 -4.327515 3.41991
+block history velocity-z position -0.113319 -4.327515 3.41991
+block history displacement-x position -0.113319 -4.327515 3.41991
+block history displacement-y position -0.113319 -4.327515 3.41991
+block history displacement-z position -0.113319 -4.327515 3.41991
+
+block history velocity-x position 1.00124 -4.17048 3.469945 ; 33 corner 
+block history velocity-y position 1.00124 -4.17048 3.469945 
+block history velocity-z position 1.00124 -4.17048 3.469945 
+block history displacement-x position 1.00124 -4.17048 3.469945 
+block history displacement-y position 1.00124 -4.17048 3.469945
+block history displacement-z position 1.00124 -4.17048 3.469945
+
+;history name '27' label 'C19_MiddleSail'
+;history name '33' label 'C19_Corner'
+
+;plot create 'C18_35Down_Velocity'
+;plot item create chart-history history '26' vs '2' 
+;plot item create chart-history history '32' vs '2' 
+
+
+block history velocity-x position 0.90069 -3.75139 3.9495  ; 39 middle of sail 
+block history velocity-y position 0.90069 -3.75139 3.9495
+block history velocity-z position 0.90069 -3.75139 3.9495
+block history displacement-x position 0.90069 -3.75139 3.9495
+block history displacement-y position 0.90069 -3.75139 3.9495
+block history displacement-z position 0.90069 -3.75139 3.9495
+
+block history velocity-x position -0.10099 -3.85667 3.9435; 45 corner 
+block history velocity-y position -0.10099 -3.85667 3.9435 
+block history velocity-z position -0.10099 -3.85667 3.9435 
+block history displacement-x position -0.10099 -3.85667 3.9435 
+block history displacement-y position -0.10099 -3.85667 3.9435 
+block history displacement-z position -0.10099 -3.85667 3.9435
+
+history name '39' label 'C30_MiddleSail'
+history name '45' label 'C30_Corner'
+
+;plot create 'C18_35Up_Velocity'
+;plot item create chart-history history '38' vs '2' 
+;plot item create chart-history history '44' vs '2'
+
+block hide off
+
+model save '18_35_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+ 
+model gravity 0 0 -9.81
+model cycle  40000  ;10000
+
+model save '18_35E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_0.wrl'
+block group 'C36_36_0'
+
+
+block history velocity-x position -3.09521 -1.78702 4.20265  ; 51 middle of sail 
+block history velocity-y position -3.09521 -1.78702 4.20265
+block history velocity-z position -3.09521 -1.78702 4.20265
+block history displacement-x position -3.09521 -1.78702 4.20265
+block history displacement-y position -3.09521 -1.78702 4.20265
+block history displacement-z position -3.09521 -1.78702 4.20265
+
+block history velocity-x position -3.5434 -0.0466506 4.20265; 57 corner 
+block history velocity-y position -3.5434 -0.0466506 4.20265 
+block history velocity-z position -3.5434 -0.0466506 4.20265 
+block history displacement-x position -3.5434 -0.0466506 4.20265
+block history displacement-y position -3.5434 -0.0466506 4.20265 
+block history displacement-z position -3.5434 -0.0466506 4.20265
+
+history name '51' label 'C36_MiddleSail'
+history name '57' label 'C36_Corner'
+
+
+block hide off
+
+model save '36_36_0_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  40000  ;20000
+
+model save '36_36_0E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_1.wrl'
+block group 'C36_36_1'
+block hide off
+
+model save '36_36_1_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_1E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_2.wrl'
+block group 'C36_36_2'
+block hide off
+
+model save '36_36_2_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_2E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_3.wrl'
+block group 'C36_36_3'
+block hide off
+
+model save '36_36_3_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_3E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_4.wrl'
+block group 'C36_36_4'
+block hide off
+
+model save '36_36_4_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_4E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_5.wrl'
+block group 'C36_36_5'
+block hide off
+
+model save '36_36_5_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_5E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_6.wrl'
+block group 'C36_36_6'
+block hide off
+
+model save '36_36_6_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_6E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_7.wrl'
+block group 'C36_36_7'
+block hide off
+
+model save '36_36_7_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_7E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_8.wrl'
+block group 'C36_36_8'
+block hide off
+
+model save '36_36_8_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_8E_State'
+
+;-------------------------------------------
+
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_9.wrl'
+block group 'C36_36_9'
+block hide off
+
+model save '36_36_9_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_9E_State'
+
+;-------------------------------------------
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_10.wrl'
+block group 'C36_36_10'
+block hide off
+
+model save '36_36_10_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_10E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_11.wrl'
+block group 'C36_36_11'
+block hide off
+
+model save '36_36_11_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_11E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_12.wrl'
+block group 'C36_36_12'
+block hide off
+
+model save '36_36_12_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_12E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_13.wrl'
+block group 'C36_36_13'
+block hide off
+
+model save '36_36_13_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_13E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_14.wrl'
+block group 'C36_36_14'
+block hide off
+
+model save '36_36_14_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_14E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_15.wrl'
+block group 'C36_36_15'
+block hide off
+
+model save '36_36_15_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_15E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_16.wrl'
+block group 'C36_36_16'
+block hide off
+
+model save '36_36_16_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_16E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_17.wrl'
+block group 'C36_36_17'
+block hide off
+
+model save '36_36_17_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_17E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_18.wrl'
+block group 'C36_36_18'
+block hide off
+
+model save '36_36_18_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_18E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_19.wrl'
+block group 'C36_36_19'
+block hide off
+
+model save '36_36_19_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_19E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_20.wrl'
+block group 'C36_36_20'
+block hide off
+
+model save '36_36_20_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_20E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_21.wrl'
+block group 'C36_36_21'
+block hide off
+
+model save '36_36_21_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_21E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_22.wrl'
+block group 'C36_36_22'
+block hide off
+
+model save '36_36_22_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_22E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_36_23.wrl'
+block group 'C36_36_23'
+block hide off
+
+model save '36_36_23_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+ 
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '36_36_23E_State'
+
+model cycle  20000
+
+model save '36_Final_State'
+
+; Start second phase! Chack If the vatriable are saved or not! Hope not to cal nev variable
+;-------------------------------------------
+;-------------------------------------------
+;-------------------------------------------
+;-------------------------------------------
+
+; Plot geometry
+model restore '18_35E_State'
+
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_36_53.wrl'
+block group 'C36_53'
+
+block history velocity-x position -0.08834 -3.37386 4.36409 ; 51 middle of sail
+block history velocity-y position -0.08834 -3.37386 4.36409
+block history velocity-z position -0.08834 -3.37386 4.36409
+block history displacement-x position -0.08834 -3.37386 4.36409
+block history displacement-y position -0.08834 -3.37386 4.36409
+block history displacement-z position -0.08834 -3.37386 4.36409
+
+block history velocity-x position 0.78788 -3.28176 4.36409 ; 57 corner
+block history velocity-y position 0.78788 -3.28176 4.36409
+block history velocity-z position 0.78788 -3.28176 4.36409
+block history displacement-x position 0.78788 -3.28176 4.36409
+block history displacement-y position 0.78788 -3.28176 4.36409
+block history displacement-z position 0.78788 -3.28176 4.36409
+
+history name '51' label 'C40_MiddleSail'
+history name '57' label 'C40_Corner'
+
+
+;plot create 'C36_53Down_Velocity'
+;plot item create chart-history history '51' vs '2'
+;plot item create chart-history history '57' vs '2'
+
+block history velocity-x position 0.66451 -2.7679 4.7257 ; 63 middle of sail
+block history velocity-y position 0.66451 -2.7679 4.7257
+block history velocity-z position 0.66451 -2.7679 4.7257
+block history displacement-x position 0.66451 -2.7679 4.7257
+block history displacement-y position 0.66451 -2.7679 4.7257
+block history displacement-z position 0.66451 -2.7679 4.7257
+
+block history velocity-x position -0.074514 -2.84559 4.7257 ; 69 corner
+block history velocity-y position -0.074514 -2.84559 4.7257
+block history velocity-z position -0.074514 -2.84559 4.7257
+block history displacement-x position -0.074514 -2.84559 4.7257
+block history displacement-y position -0.074514 -2.84559 4.7257
+block history displacement-z position -0.074514 -2.84559 4.7257
+
+history name '63' label 'C50_MiddleSail'
+history name '69' label 'C50_Corner'
+
+;plot create 'C36_53Up_Velocity'
+;plot item create chart-history history '62' vs '2'
+;plot item create chart-history history '68' vs '2'
+block hide off
+
+model save '36_53_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  40000  ;20000
+
+model save '36_53E_State'
+
+;------------------------------------------
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_0.wrl'
+block group 'C54_54_0'
+
+block history velocity-x position -2.48001 -0.66451 4.88304 ; 75 middle of sail
+block history velocity-y position -2.48001 -0.66451 4.88304
+block history velocity-z position -2.48001 -0.66451 4.88304
+block history displacement-x position -2.48001 -0.66451 4.88304
+block history displacement-y position -2.48001 -0.66451 4.88304
+block history displacement-z position -2.48001 -0.66451 4.88304
+
+history name '75' label 'C54_MiddleSail'
+
+block history velocity-x position -2.553 -0.26837 4.88304 ; 81 corner
+block history velocity-y position -2.553 -0.26837 4.88304
+block history velocity-z position -2.553 -0.26837 4.88304
+block history displacement-x position -2.553 -0.26837 4.88304
+block history displacement-y position -2.553 -0.26837 4.88304
+block history displacement-z position -2.553 -0.26837 4.88304
+
+history name '81' label 'C54_Corner'
+
+block hide off
+
+model save '54_54_0_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_0E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_1.wrl'
+block group 'C54_54_1'
+block hide off
+
+model save '54_54_1_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_1E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_2.wrl'
+block group 'C54_54_2'
+block hide off
+
+model save '54_54_2_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_2E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_3.wrl'
+block group 'C54_54_3'
+block hide off
+
+model save '54_54_3_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_3E_State'
+
+;-------------------------------------------
+
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_4.wrl'
+block group 'C54_54_4'
+block hide off
+
+model save '54_54_4_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_4E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_5.wrl'
+block group 'C54_54_5'
+block hide off
+
+model save '54_54_5_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_5E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_6.wrl'
+block group 'C54_54_6'
+block hide off
+
+model save '54_54_6_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_6E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_7.wrl'
+block group 'C54_54_7'
+block hide off
+
+model save '54_54_7_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_7E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_8.wrl'
+block group 'C54_54_8'
+block hide off
+
+model save '54_54_8_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_8E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_9.wrl'
+block group 'C54_54_9'
+block hide off
+
+model save '54_54_9_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_9E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_10.wrl'
+block group 'C54_54_10'
+block hide off
+
+model save '54_54_10_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_10E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_11.wrl'
+block group 'C54_54_11'
+block hide off
+
+model save '54_54_11_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_11E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_12.wrl'
+block group 'C54_54_12'
+block hide off
+
+model save '54_54_12_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_12E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_13.wrl'
+block group 'C54_54_13'
+block hide off
+
+model save '54_54_13_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_13E_State'
+
+;-------------------------------------------
+
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_14.wrl'
+block group 'C54_54_14'
+block hide off
+
+model save '54_54_14_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_14E_State'
+
+;-----------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_15.wrl'
+block group 'C54_54_15'
+block hide off
+
+model save '54_54_15_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_15E_State'
+
+;-----------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_16.wrl'
+block group 'C54_54_16'
+block hide off
+
+model save '54_54_16_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_16E_State'
+
+;-----------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_17.wrl'
+block group 'C54_54_17'
+block hide off
+
+model save '54_54_17_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_17E_State'
+
+;-----------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_18.wrl'
+block group 'C54_54_18'
+block hide off
+
+model save '54_54_18_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_18E_State'
+
+;-----------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_19.wrl'
+block group 'C54_54_19'
+block hide off
+
+model save '54_54_19_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_19E_State'
+
+;-----------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_20.wrl'
+block group 'C54_54_20'
+block hide off
+
+model save '54_54_20_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_20E_State'
+
+;-----------------------------------------
+
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_21.wrl'
+block group 'C54_54_21'
+block hide off
+
+model save '54_54_21_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_21E_State'
+
+;-----------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_22.wrl'
+block group 'C54_54_22'
+block hide off
+
+model save '54_54_22_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_22E_State'
+
+;-----------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_54_23.wrl'
+block group 'C54_54_23'
+block hide off
+
+model save '54_54_23_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+
+model gravity 0 0 -9.81
+model cycle  20000  ;20000
+
+model save '54_54_23E_State'
+
+model cycle  20000  ;20000
+
+model save '54_FinalState'
+;-----------------------------------------
+
+model restore '36_53E_State'
+
+;-----------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_54_71.wrl'
+block group 'C54_71'
+
+block history velocity-x position 0.392715 -1.63576 5.25415  ; 75middle of sail
+block history velocity-y position 0.392715 -1.63576 5.25415
+block history velocity-z position 0.392715 -1.63576 5.25415
+block history displacement-x position 0.392715 -1.63576 5.25415
+block history displacement-y position 0.392715 -1.63576 5.25415
+block history displacement-z position 0.392715 -1.63576 5.25415
+
+block history velocity-x position -0.044036 -1.68167 5.25415 ; 81corner
+block history velocity-y position -0.044036 -1.68167 5.25415
+block history velocity-z position -0.044036 -1.68167 5.25415
+block history displacement-x position -0.044036 -1.68167 5.25415
+block history displacement-y position -0.044036 -1.68167 5.25415
+block history displacement-z position -0.044036 -1.68167 5.25415
+
+
+history name '75' label 'C70_MiddleSail'
+history name '81' label 'C70_Corner'
+
+;plot create 'C54-71_Velocity'
+;plot item create chart-history history '74' vs '2'
+;plot item create chart-history history '80' vs '2'
+
+block hide off
+
+model save '54_71_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+model gravity 0 0 -9.81
+model cycle  40000  ;20000
+
+model save '54_71E_State'
+
+;-------------------------------------------
+
+; Plot geometry
+block hide on
+block generate from-vrml filename 'dome_herringbone_5_1_65_12_1_1_72_78.wrl'
+block group 'C72_78'
+
+block history velocity-x position -0.032721 -1.24957 5.37341  ;87middle of sail
+block history velocity-y position -0.032721 -1.24957 5.37341
+block history velocity-z position -0.032721 -1.24957 5.37341
+block history displacement-x position -0.032721 -1.24957 5.37341
+block history displacement-y position -0.032721 -1.24957 5.37341
+block history displacement-z position -0.032721 -1.24957 5.37341
+
+block history velocity-x position 0.29180 -1.21546 5.37341 ;93 corner
+block history velocity-y position 0.29180 -1.21546 5.37341
+block history velocity-z position 0.29180 -1.21546 5.37341
+block history displacement-x position 0.29180 -1.21546 5.37341
+block history displacement-y position 0.29180 -1.21546 5.37341
+block history displacement-z position 0.29180 -1.21546 5.37341
+
+history name '87' label 'C78_MiddleSail'
+history name '93'label 'C78_Corner'
+
+block hide off
+
+model save '72_78_State'
+
+; Material--Units: m, kg/m^3, N, Pa/m, m/s^2--Bricks Masonry (Dim 0.05*0.1*0.2 [m])
+block property density 2000
+
+; Interfaces properties
+block contact generate-subcontacts
+block contact prop stiffness-norm=1.5e9 stiffness-shear=1.5e8 friction=25
+block contact material-table default prop stiffness-norm=1e9 stiffness-shear=1e8 friction=15
+
+; Damping
+block mechanical damping global
+
+; Laods--Gravity [m/s^2]
+
+model gravity 0 0 -9.81
+model cycle  40000
+
+model save '72_78E_State'
+
+model cycle  40000
+
+model save '78_Final_State'
+;-------------------------------------------
+;
+;; Additional Check
+;; Run
+;
+;model cycle 40000
+model solve ratio-average 1e-9
+;;
+;;model save 'Final_State'
+;;
+;;;Export fitness
+;;;history export '1' file 'Unbalanced Force' ;You are dumb!! Do not move! The position matters, its compiled!!! 
+;;
+;;;-------------------------------------------
+;;;-------------------------------------------
+;;;-------------------------------------------
+;;model restore 'initial'
+
+
+
+
+
