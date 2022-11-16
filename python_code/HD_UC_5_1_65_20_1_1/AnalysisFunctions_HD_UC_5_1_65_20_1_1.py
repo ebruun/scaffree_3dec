@@ -88,7 +88,7 @@ mech_properties = {
     'fric_angl_Broken1': 25,
     'fric_angl_Broken2': 20,
 
-    'number_cycle': 5,     # cycle
+    'number_cycle': 40000,     # cycle
 
 }
 
