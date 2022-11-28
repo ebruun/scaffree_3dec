@@ -60,31 +60,32 @@ mech_properties = {
 # CNunM = [x,y,z]
 points= [
 
-    [-0.2597,-6.9409,3.3781], #C02M   #03
-    [2.5476,-6.4911,3.3212], #C02Co   #09
-    [2.3163,-5.9019,4.411], #C20M   #15
-    [-0.1186,-6.3391,4.411], #C20Co   #21
+[6.9989,-0.0,0.1265], #Co2M
+[6.4661,2.6783,0.1265], #C02
 
-    [-0.1027,-5.4934,5.4284],#C42M   #27
-    [2.0073,-5.1145,5.4284], #C42Co   #33
+[6.3511,2.6307,1.3201], #C21
+[6.8744,-0.0,1.3201], #C21
 
-    [-4.5502,-1.7858,5.9801], #C54M   #39
-    [-4.0387,-2.7536,5.9801], #C54Co   #45
+[6.5253,-0.0,2.5339], #41M
+[6.0072,2.4883,2.5928], #41Co
 
-    [1.6206,-4.1291,6.3229], #C62M   #39
-    [-0.0839,-4.4864,6.2864], #C62Co   #45
+[5.3838,2.23,3.8783], #C66M
+[5.8955,-0.1103,3.7724], #C66Co
 
-    [-3.1464,-1.4434,6.9044], #C81Co   #51
-    [-3.1982,-1.3247,6.9044], #C81Co   #57
+[5.0784,-0.095,4.8167], #C84M
+[4.6927,1.9438,4.8167], # C84Co
 
-    [-0.0626,-3.3479,6.9601], #C82M   #51
-    [1.2596,-3.041,6.9872], #C82Co   #57
+[3.7216,1.5416,5.7248], #C105M
+[4.0791,-0.0763,5.6882], #C105Co
 
-    [0.7848,-1.8946,7.4464], #C101Co  #63
-    [-0.0395,-2.1111,7.4294], #C101M  #69
+[2.9334,-0.0549,6.3555], #C127M
+[2.7106,1.1228,6.3555], #C127Co
 
-    [-0.0245,-1.312,7.6114], #C119M  #71
-    [0.5022,-1.2123,7.6114] #C119Co  #11
+[1.5547,0.644,6.7947], #C148M
+[1.6825,-0.0315,6.7947], #C148Co
+
+[1.2498,-0.0234,6.8875], #C154M
+[1.1548,0.4784,6.8875], #C154Co
 
 ]
 
@@ -234,33 +235,33 @@ for c_stage_name in c_stage_names:
 
     print("running...{}".format(c_stage_name))
 
-    if c_stage_name == 'dome_herringbone_7_1_90_8_1_1_54_80.wrl':
-        it.command("model restore '../../3dec_output/HD_UC_7_1_90_8_1_1_Output/27_53_E_State'") ##check the path
-    elif c_stage_name == 'dome_herringbone_7_1_90_8_1_1_81_119.wrl':
-        it.command("model restore '../../3dec_output/HD_UC_7_1_90_8_1_1_Output/54_80_E_State'")
+#    if c_stage_name == 'dome_herringbone_7_1_90_8_1_1_54_80.wrl':
+#      it.command("model restore '../../3dec_output/HD_UC_7_1_90_8_1_1_Output/27_53_E_State'") ##check the path
+#   elif c_stage_name == 'dome_herringbone_7_1_90_8_1_1_81_119.wrl':
+#      it.command("model restore '../../3dec_output/HD_UC_7_1_90_8_1_1_Output/54_80_E_State'")
     model_geometries(c_stage_name,cwd_path)
-    if c_stage_name =='dome_herringbone_7_1_90_8_1_1_2_26.wrl':
+    if c_stage_name =='dome_herringbone_7_1_90_8_1_1_2_24.wrl':
         coord_point(points[0])
         coord_point(points[1])
         coord_point(points[2])
         coord_point(points[3])
-    elif c_stage_name =='dome_herringbone_7_1_90_8_1_1_27_53.wrl':
+    elif c_stage_name =='dome_herringbone_7_1_90_8_1_1_25_49.wrl':
         coord_point(points[4])
         coord_point(points[5])         
-    elif c_stage_name =='dome_herringbone_7_1_90_8_1_1_54_54_0.wrl':
+    elif c_stage_name =='dome_herringbone_7_1_90_8_1_1_50_74.wrl':
         coord_point(points[6])
-        coord_point(points[7])
-    elif c_stage_name =='dome_herringbone_7_1_90_8_1_1_54_80.wrl':
+        coord_point(points[7])      
+    elif c_stage_name =='dome_herringbone_7_1_90_8_1_1_75_99.wrl':
         coord_point(points[8])
-        coord_point(points[9])      
-    elif c_stage_name =='dome_herringbone_7_1_90_8_1_1_81_81_0.wrl':
+        coord_point(points[9]) 
+    elif c_stage_name =='dome_herringbone_7_1_90_8_1_1_100_124.wrl':
         coord_point(points[10])
         coord_point(points[11]) 
-    elif c_stage_name =='dome_herringbone_7_1_90_8_1_1_81_119.wrl':
+    elif c_stage_name =='dome_herringbone_7_1_90_8_1_1_125_149.wrl':
         coord_point(points[12])
-        coord_point(points[13]) 
+        coord_point(points[13])
         coord_point(points[14])
-        coord_point(points[15])
+        coord_point(points[15]) 
         coord_point(points[16])
         coord_point(points[17])  
  
