@@ -38,17 +38,17 @@ mech_properties = {
     'stif_norm1': 1.5e9, # stiffness-norm [Pa/m] 
     'stif_norm2': 1.0e9,
     'stif_norm_Broken1': 1.0e9,
-    'stif_norm_Broken2' : 1.0e9,
+    'stif_norm_Broken2' : 0.75e9,
 
     'stif_shear1': 1.5e8,  # stiffness-shear [Pa/m] 
     'stif_shear2': 1.0e8,
     'stif_shear_Broken1': 1.0e8,
-    'stif_shear_Broken2': 1.0e8,
+    'stif_shear_Broken2': 0.75e8,
 
     'fric_angl1': 25,     # friction angle[grad]
     'fric_angl2': 25,
     'fric_angl_Broken1': 25,
-    'fric_angl_Broken2': 20,
+    'fric_angl_Broken2': 15,
 
     'number_cycle': 40000,     # cycle
 
@@ -154,8 +154,7 @@ def density_prop(den_value):
 def mech_prop1(stif_n1,stif_s1,fric_a1,stif_n_Brok1,stif_s_Brok1,fric_a_Brok1):
     mech_prop_action = '''
     block contact generate-subcontacts
-    block contact group 'boundary'
-    block contact prop stiffness-norm={} stiffness-shear={} friction={} range group 'boundary'
+    block contact prop stiffness-norm={} stiffness-shear={} friction={} range group 'Free' not
     block contact material-table default prop stiffness-norm={} stiffness-shear={} friction={}
     '''.format(stif_n1,stif_s1,fric_a1,stif_n_Brok1,stif_s_Brok1,fric_a_Brok1)
     it.command(mech_prop_action)
@@ -163,8 +162,8 @@ def mech_prop1(stif_n1,stif_s1,fric_a1,stif_n_Brok1,stif_s_Brok1,fric_a_Brok1):
 def mech_prop2(stif_n2,stif_s2,fric_a2,stif_n_Brok2,stif_s_Brok2,fric_a_Brok2):
     mech_prop_action  = '''
     block contact generate-subcontacts
-    block contact group 'boundary'
-    block contact prop stiffness-norm={} stiffness-shear={} friction={} range group 'boundary'
+    block contact group 'Free'
+    block contact prop stiffness-norm={} stiffness-shear={} friction={} range group 'Free'
     block contact material-table default prop stiffness-norm={} stiffness-shear={} friction={}
     '''.format(stif_n2,stif_s2,fric_a2,stif_n_Brok2,stif_s_Brok2,fric_a_Brok2)
     it.command(mech_prop_action)
@@ -235,10 +234,10 @@ for c_stage_name in c_stage_names:
 
     print("running...{}".format(c_stage_name))
 
-#    if c_stage_name == 'dome_herringbone_7_1_90_8_1_1_54_80.wrl':
-#      it.command("model restore '../../3dec_output/HD_UC_7_1_90_8_1_1_Output/27_53_E_State'") ##check the path
-#   elif c_stage_name == 'dome_herringbone_7_1_90_8_1_1_81_119.wrl':
-#      it.command("model restore '../../3dec_output/HD_UC_7_1_90_8_1_1_Output/54_80_E_State'")
+    if c_stage_name == 'dome_herringbone_7_1_90_8_1_1_54_80.wrl':
+      it.command("model restore '../../3dec_output/HD_UC_7_1_90_8_1_1_Output/27_53_E_State'") ##check the path
+    elif c_stage_name == 'dome_herringbone_7_1_90_8_1_1_81_119.wrl':
+      it.command("model restore '../../3dec_output/HD_UC_7_1_90_8_1_1_Output/54_80_E_State'")
     model_geometries(c_stage_name,cwd_path)
     if c_stage_name =='dome_herringbone_7_1_90_8_1_1_2_24.wrl':
         coord_point(points[0])
@@ -247,21 +246,21 @@ for c_stage_name in c_stage_names:
         coord_point(points[3])
     elif c_stage_name =='dome_herringbone_7_1_90_8_1_1_25_49.wrl':
         coord_point(points[4])
-        coord_point(points[5])         
+        coord_point(points[5])
     elif c_stage_name =='dome_herringbone_7_1_90_8_1_1_50_74.wrl':
         coord_point(points[6])
-        coord_point(points[7])      
+        coord_point(points[7])
     elif c_stage_name =='dome_herringbone_7_1_90_8_1_1_75_99.wrl':
         coord_point(points[8])
-        coord_point(points[9]) 
+        coord_point(points[9])
     elif c_stage_name =='dome_herringbone_7_1_90_8_1_1_100_124.wrl':
         coord_point(points[10])
-        coord_point(points[11]) 
-    elif c_stage_name =='dome_herringbone_7_1_90_8_1_1_125_149.wrl':
+        coord_point(points[11])
+    elif c_stage_name =='dome_herringbone_7_1_90_8_1_1_125_154.wrl':
         coord_point(points[12])
         coord_point(points[13])
         coord_point(points[14])
-        coord_point(points[15]) 
+        coord_point(points[15])
         coord_point(points[16])
         coord_point(points[17])  
  
@@ -270,16 +269,15 @@ for c_stage_name in c_stage_names:
     group_block(name_c_stages[0])
     save_c_state(name_c_stages[1])
     density_prop(block_prop_density)
-    
+   
     if c_stage_name == 'dome_herringbone_7_1_90_8_1_1_1_1.wrl':
         mech_prop2(stif_norm2,stif_shear2,fric_angl2,stif_norm_Broken2,stif_shear_Broken2,fric_angl_Broken2)
     else:
         mech_prop1(stif_norm1,stif_shear1,fric_angl1,stif_norm_Broken1,stif_shear_Broken1,fric_angl_Broken1)
-    
     gravity()
     cycle(number_cycle)
     save_c_state(name_c_stages[1].split("_State")[0]+'_E_State')
-    
+
 it.command("""
     model solve ratio-average 1e-9
     model save '../../3dec_output/HD_UC_7_1_90_8_1_1_Output/Complete_dome'
