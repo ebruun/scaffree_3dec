@@ -154,8 +154,7 @@ def density_prop(den_value):
 def mech_prop1(stif_n1,stif_s1,fric_a1,stif_n_Brok1,stif_s_Brok1,fric_a_Brok1):
     mech_prop_action = '''
     block contact generate-subcontacts
-    block contact group 'boundary'
-    block contact prop stiffness-norm={} stiffness-shear={} friction={} range group 'boundary'
+    block contact prop stiffness-norm={} stiffness-shear={} friction={} range group 'Free' not
     block contact material-table default prop stiffness-norm={} stiffness-shear={} friction={}
     '''.format(stif_n1,stif_s1,fric_a1,stif_n_Brok1,stif_s_Brok1,fric_a_Brok1)
     it.command(mech_prop_action)
@@ -163,8 +162,8 @@ def mech_prop1(stif_n1,stif_s1,fric_a1,stif_n_Brok1,stif_s_Brok1,fric_a_Brok1):
 def mech_prop2(stif_n2,stif_s2,fric_a2,stif_n_Brok2,stif_s_Brok2,fric_a_Brok2):
     mech_prop_action  = '''
     block contact generate-subcontacts
-    block contact group 'boundary'
-    block contact prop stiffness-norm={} stiffness-shear={} friction={} range group 'boundary'
+    block contact group 'Free'
+    block contact prop stiffness-norm={} stiffness-shear={} friction={} range group 'Free'
     block contact material-table default prop stiffness-norm={} stiffness-shear={} friction={}
     '''.format(stif_n2,stif_s2,fric_a2,stif_n_Brok2,stif_s_Brok2,fric_a_Brok2)
     it.command(mech_prop_action)
